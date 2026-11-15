@@ -2,7 +2,7 @@
 
 広瀬プティのSileo向けツイーク配布リポジトリ。
 
-- [配布ページ](https://puty0807.github.io/PHS-Repo/)
+- [配布ページ](https://puty0807.github.io/repo/)
 - [Ｐ.Ｈ.Ｓ 公式サイト](https://puteihirose.com/)
 
 ## LockNote 0.1.2（試験版）
