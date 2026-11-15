@@ -1,0 +1,14 @@
+Package: jp.puteihirose.locknote
+Version: 0.1.1
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 92
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Filename: ./debs/jp.puteihirose.locknote_0.1.1_iphoneos-arm64.deb
+Size: 13222
+SHA256: 960371a7d8f4f5fc55186acb4e388ed61ac0e63da33673863376bf6400670f46
+Section: Tweaks
+Description: An editable sticky note for the iOS 15 Lock Screen.
+Author: Putei Hirose
+Name: LockNote
+

@@ -1,0 +1,17 @@
+Origin: Ｐ.Ｈ.Ｓ
+Label: Ｐ.Ｈ.Ｓ
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: iphoneos-arm64
+Components: main
+Description: P.H.S jailbreak tweaks for iOS 15 rootless.
+Date: Sun, 15 Nov 2026 12:57:05 GMT
+SHA256:
+ 16c16c8b28f320d3a6a8a16b124aa9f923208a0f05f91ee5b8cf088390be4f1b              438 Packages
+ d32801eaabc062e48e8c204b15375345eb2019598e3798439ce16845ad5486da              317 Packages.gz
+ 4e90f1c20350c89ebd165912c3e633982fd1db2a94f3b371a186b4f90f841dd8              354 Packages.bz2
+SHA512:
+ aba617771839df790211761f48f25bb2ac555eea77464cec27108fca0b9e551ac3ef6ec47a9281399971c794e506cb779ccf53abca1afd44e296f835a8fa17b2              438 Packages
+ 2a47b1a36d3dbc1b49289f39d5c3e4d5af2e608b0fc85f9b5751cb1741297703e77a29e5f96b6157151f97e281a2e40517bee2299c2b0200642d398891f3583c              317 Packages.gz
+ 5fbaafa95ffcd4720a02e0dff14184b56ef16eee921c2503d8ecffe82ff6156e094f341d8c6a526a9175027922cf198fa886b8457e2addc9fcd4d5b8e4936435              354 Packages.bz2
