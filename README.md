@@ -1,8 +1,8 @@
 # Ｐ.Ｈ.Ｓ
 
-広瀬プティのSileo向けツイーク配布リポジトリ。
+広瀬プティの脱獄ツイーク配布リポジトリ。
 
-[配布ページ](https://puty0807.github.io/repo/)の「Sileoで追加」から登録すると、Sileoでインストール・更新できる。
+[配布ページ](https://puty0807.github.io/repo/)からSileo・Zebra・Cydiaのソース追加画面を開ける。パッケージはiOS 15・Dopamine Rootless向け。Zebra・Cydiaでの動作は実機確認待ち。
 
 - [Keyboardのスクリーンショット](https://puty0807.github.io/repo/#keyboard)
 - [PINの使い方とスクリーンショット](https://puty0807.github.io/repo/#pin)

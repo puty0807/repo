@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d0c0b">
-  <title>Ｐ.Ｈ.Ｓ | Sileo Repository</title>
+  <title>Ｐ.Ｈ.Ｓ | Jailbreak Repository</title>
   <link rel="icon" type="image/png" sizes="64x64" href="./CydiaIcon.png">
   <style>
     :root {
@@ -77,6 +77,7 @@
     .secondary:hover { background: #241c13; }
     [hidden] { display: none !important; }
     .address { display: block; margin: .8rem auto 0; color: var(--muted); font: .76rem/1.7 monospace; overflow-wrap: anywhere; }
+    .manager-note { display: block; margin: .3rem auto 0; color: var(--muted); font-size: .75rem; }
     .feedback { display: block; min-height: 1.4rem; margin-top: .35rem; color: var(--gold); font-size: .75rem; }
     .content { width: min(100% - 2.7rem, 52rem); margin: 0 auto; }
     .release {
@@ -134,12 +135,15 @@
     <header class="hero">
       <img class="portrait" src="./CydiaIcon@2x.png" srcset="./CydiaIcon@3x.png 2x" width="64" height="64" alt="">
       <h1>P.H.S</h1>
-      <p class="intro">広瀬プティのSileoリポジトリ</p>
+      <p class="intro">広瀬プティの脱獄ツイーク配布リポジトリ</p>
       <div class="buttons">
         <a class="button primary" href="sileo://source/https://puty0807.github.io/repo/">Sileoで追加</a>
+        <a class="button secondary" href="zbra://sources/add/https://puty0807.github.io/repo/">Zebraで追加</a>
+        <a class="button secondary" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://puty0807.github.io/repo/">Cydiaで追加</a>
         <button class="button secondary" id="copy-address" type="button" hidden>URLをコピー</button>
       </div>
       <code class="address" id="repo-address">https://puty0807.github.io/repo/</code>
+      <small class="manager-note">配布対象はiOS 15・Dopamine Rootless。Zebra・Cydiaでの動作は実機確認待ち。</small>
       <small class="feedback" id="copy-status" role="status"></small>
     </header>
 
@@ -254,7 +258,7 @@
       copy.addEventListener('click', async () => {
         try {
           await navigator.clipboard.writeText(address.textContent.trim());
-          status.textContent = 'コピーしたURLをSileoの「リポジトリ」→「＋」に貼り付けてね。';
+          status.textContent = 'コピーしたURLをパッケージ管理アプリのソース追加画面に貼り付けてね。';
         } catch {
           status.textContent = '上のURLを長押ししてコピーしてね。';
         }
