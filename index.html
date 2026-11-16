@@ -24,7 +24,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: clamp(3.8rem, 9vw, 7rem) 1.35rem clamp(2.8rem, 6vw, 4.5rem);
+      padding: clamp(2rem, 6vw, 3.75rem) 1.35rem 1.65rem;
       text-align: center;
       background:
         radial-gradient(ellipse at 50% 12%, #3d2c1b 0%, #1c1610 30%, transparent 69%),
@@ -42,9 +42,9 @@
     }
     .portrait {
       display: block;
-      margin: 0 auto 1.5rem;
-      width: 92px;
-      height: 92px;
+      margin: 0 auto .9rem;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       box-shadow: 0 0 0 1px #0d0c0b, 0 0 0 5px #382b20, 0 0 0 6px #a98456, 0 10px 32px #0009;
     }
@@ -54,7 +54,7 @@
       font-weight: 400;
       line-height: 1.05;
     }
-    h1 { color: var(--gold); font-size: clamp(3.75rem, 12vw, 7rem); letter-spacing: -.055em; }
+    h1 { color: var(--gold); font-size: clamp(3.25rem, 9vw, 5rem); letter-spacing: -.055em; }
     .intro { margin: .9rem 0 1.7rem; color: var(--muted); font-size: .91rem; }
     .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; }
     .button {
@@ -78,7 +78,7 @@
     [hidden] { display: none !important; }
     .address { display: block; margin: .8rem auto 0; color: var(--muted); font: .76rem/1.7 monospace; overflow-wrap: anywhere; }
     .feedback { display: block; min-height: 1.4rem; margin-top: .35rem; color: var(--gold); font-size: .75rem; }
-    .content { width: min(100% - 2.7rem, 44rem); margin: 0 auto; }
+    .content { width: min(100% - 2.7rem, 52rem); margin: 0 auto; }
     .release {
       margin: 0;
       padding: clamp(1.25rem, 5vw, 2rem);
@@ -96,25 +96,43 @@
     footer a { text-underline-offset: .25em; }
 
     .tweak-details { margin-top: .9rem; color: var(--muted); font-size: .88rem; }
-    .tweak-details summary { cursor: pointer; color: var(--gold); }
+    .tweak-details summary { min-height: 44px; padding: .6rem 0; cursor: pointer; color: var(--gold); }
     .tweak-details ol { padding-left: 1.35rem; margin-bottom: .8rem; }
     .tweak-details li + li { margin-top: .35rem; }
-    .tweak-nav { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; }
-    .tweak-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: .4rem .85rem; border: 1px solid var(--border); border-radius: 6px; color: var(--gold); font-size: .88rem; text-decoration: none; }
+    .tweak-nav { margin-bottom: 1rem; }
+    .tweak-nav h2 { font: 650 1rem/1.4 system-ui, sans-serif; }
+    .tweak-nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; padding: 0; margin: .65rem 0 0; list-style: none; }
+    .tweak-nav li { display: flex; }
+    .tweak-nav a { display: flex; flex: 1; flex-direction: column; justify-content: center; gap: .15rem; min-height: 64px; padding: .55rem .8rem; border: 1px solid var(--border); border-radius: 8px; background: #19150f; color: var(--gold); text-decoration: none; }
+    .tweak-nav a span { color: var(--muted); font-size: .77rem; }
     .tweak-nav a:hover, .release:target { border-color: var(--gold); }
     .release { scroll-margin-top: 1rem; }
-    .tweak-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr)); gap: .8rem; margin-top: 1.1rem; align-items: start; }
+    .gallery-heading { margin: 1rem 0 .55rem; font: 650 .95rem/1.4 system-ui, sans-serif; }
+    .tweak-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr)); gap: .8rem; align-items: start; }
+    @media (max-width: 560px) {
+      .tweak-nav ul { grid-template-columns: 1fr; gap: .45rem; }
+      .tweak-nav a { flex-direction: row; align-items: center; justify-content: space-between; gap: .75rem; min-height: 46px; }
+      .tweak-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+    }
     .tweak-gallery figure { min-width: 0; margin: 0; }
     .tweak-gallery a { display: grid; place-items: center; min-height: 6rem; background: #100e0b; border: 1px solid var(--border); border-radius: 8px; }
     .tweak-gallery a:hover { border-color: var(--gold); }
     .tweak-gallery img { display: block; width: 100%; height: 13rem; object-fit: contain; border-radius: 7px; }
     .tweak-gallery figcaption { margin-top: .3rem; color: var(--muted); font-size: .82rem; }
+    .screenshot-dialog { width: min(calc(100% - 1.25rem), 46rem); max-height: calc(100% - 1.25rem); padding: .7rem; border: 1px solid var(--border); border-radius: 12px; background: var(--base); color: inherit; }
+    .screenshot-dialog::backdrop { background: #000c; }
+    .screenshot-dialog img { display: block; width: 100%; height: auto; max-height: 72vh; max-height: 72dvh; object-fit: contain; }
+    .screenshot-controls { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .4rem; margin-top: .55rem; }
+    .screenshot-controls .button { padding: .35rem .75rem; white-space: nowrap; }
+    .screenshot-controls button:disabled { color: var(--muted); opacity: .42; cursor: default; }
+    .screenshot-caption { text-align: center; font-size: .85rem; }
+    .screenshot-close { display: flex; justify-content: flex-end; margin-bottom: .4rem; }
   </style>
 </head>
 <body>
   <main>
     <header class="hero">
-      <img class="portrait" src="./CydiaIcon@2x.png" srcset="./CydiaIcon@3x.png 2x" width="92" height="92" alt="">
+      <img class="portrait" src="./CydiaIcon@2x.png" srcset="./CydiaIcon@3x.png 2x" width="64" height="64" alt="">
       <h1>P.H.S</h1>
       <p class="intro">広瀬プティのSileoリポジトリ</p>
       <div class="buttons">
@@ -126,10 +144,13 @@
     </header>
 
     <div class="content">
-      <nav class="tweak-nav" aria-label="ツイーク一覧">
-        <a href="#keyboard">Keyboard</a>
-        <a href="#pin">PIN</a>
-        <a href="#notes">LockNote</a>
+      <nav class="tweak-nav" aria-labelledby="tweak-list">
+        <h2 id="tweak-list">ツイーク一覧</h2>
+        <ul>
+          <li><a href="#keyboard"><strong>Keyboard</strong><span>入力を編集・コピー履歴を再利用</span></a></li>
+          <li><a href="#pin"><strong>PIN</strong><span>スクショを切り取って画面に固定</span></a></li>
+          <li><a href="#notes"><strong>LockNote</strong><span>ロック画面に書ける付箋</span></a></li>
+        </ul>
       </nav>
       <article class="release" id="keyboard" aria-labelledby="keyboard-title">
         <div class="release-head">
@@ -139,7 +160,8 @@
         <p>キーボードの上にテキスト編集バーを追加。コピーした文章・画像・URLは、P.H.S CLIPから探して貼り直せる。よく使う項目は固定やお気に入りに。</p>
         <p class="spec">iOS 15 · Dopamine Rootless · arm64e／インストール後にリスプリングが必要。Spotlightは実機検証待ち。共通履歴はメモ・Safari・メッセージ・メールに限定。</p>
         <details class="tweak-details"><summary>使い方と対応環境</summary><ol><li>入力欄を開き、キーボード上のP.H.S KEYから編集する。</li><li>CLIPから履歴やお気に入りを開く。共通履歴はメモ・Safari・メッセージ・メールが対象。</li><li>Spotlight検索の対応は試験中。0.0.14では純正の「テキストをスキャン」が出たときの位置調整を見直した。</li></ol><p>iOS 15・Dopamine Rootless向け。アプリの入力欄によって表示は異なる。Spotlightの0.0.14の変更は実機再確認待ち。</p></details>
-        <div class="tweak-gallery" role="group" aria-label="P.H.S KEYBOARDのスクリーンショット">
+        <h3 class="gallery-heading" id="keyboard-screenshots">スクリーンショット</h3>
+        <div class="tweak-gallery" role="group" aria-labelledby="keyboard-screenshots">
           <figure>
             <a href="./screenshots/keyboard-01-editor.jpg" aria-label="P.H.S KEYの編集バーを拡大"><img src="./screenshots/keyboard-01-editor.jpg" width="900" height="451" alt="切り取り・コピー・貼り付け・全選択・取り消し・カーソル移動・履歴を開くボタン" loading="lazy" decoding="async"></a>
             <figcaption>P.H.S KEYの編集バー</figcaption>
@@ -149,7 +171,7 @@
             <figcaption>P.H.S CLIPのコピー履歴</figcaption>
           </figure>
           <figure>
-            <a href="./screenshots/keyboard-03-clip-organize.jpg" aria-label="履歴を整理を拡大"><img src="./screenshots/keyboard-03-clip-organize.jpg" width="900" height="1036" alt="履歴を長押しして固定・お気に入り・カテゴリを設定するメニュー" loading="lazy" decoding="async"></a>
+            <a href="./screenshots/keyboard-03-clip-organize.jpg" aria-label="履歴の整理画面を拡大"><img src="./screenshots/keyboard-03-clip-organize.jpg" width="900" height="1036" alt="履歴を長押しして固定・お気に入り・カテゴリを設定するメニュー" loading="lazy" decoding="async"></a>
             <figcaption>履歴を整理</figcaption>
           </figure>
           <figure>
@@ -166,6 +188,25 @@
         <p>サイドボタン＋音量上から、通常のスクショか範囲の切り取りを選べる。切り取った画像を複数枚ピン留めできる。</p>
         <p class="spec">iOS 15 · Dopamine Rootless向け。スクショボタンからの起動は実機確認待ち。</p>
         <details class="tweak-details"><summary>使い方と対応環境</summary><ol><li>サイドボタン＋音量上を押し、「通常のスクショ」か「範囲を切り取る」を選ぶ。</li><li>範囲をなぞって「固定」。コピー済みの画像は、端のピンから追加できる。</li><li>「…」からコピー・共有、OCR、QR読み取り。端のピンから直近12件の履歴を開ける。</li></ol><p>iOS 15・Dopamine Rootless向け。アプリをまたぐ基本表示は0.1.0で確認済み。0.4.0のスクショボタンからの起動は実機確認待ち。</p></details>
+        <h3 class="gallery-heading" id="pin-screenshots">スクリーンショット</h3>
+        <div class="tweak-gallery" role="group" aria-labelledby="pin-screenshots">
+          <figure>
+            <a href="./screenshots/pin-01-capture-options.jpg" aria-label="撮り方の選択画面を拡大"><img src="./screenshots/pin-01-capture-options.jpg" width="560" height="1212" alt="通常のスクショと範囲の切り取りを選ぶメニュー" loading="lazy" decoding="async"></a>
+            <figcaption>撮り方を選ぶ</figcaption>
+          </figure>
+          <figure>
+            <a href="./screenshots/pin-02-pinned-image.jpg" aria-label="固定した画像のスクリーンショットを拡大"><img src="./screenshots/pin-02-pinned-image.jpg" width="560" height="1212" alt="切り取った画像をツールバー付きで画面上に固定した状態" loading="lazy" decoding="async"></a>
+            <figcaption>画像を画面に固定</figcaption>
+          </figure>
+          <figure>
+            <a href="./screenshots/pin-03-multiple-pins.jpg" aria-label="複数枚を固定したスクリーンショットを拡大"><img src="./screenshots/pin-03-multiple-pins.jpg" width="560" height="1212" alt="複数の画像を重ねて画面に固定した状態" loading="lazy" decoding="async"></a>
+            <figcaption>複数枚を同時に固定</figcaption>
+          </figure>
+          <figure>
+            <a href="./screenshots/pin-04-actions.jpg" aria-label="PINの操作メニューの画像を拡大"><img src="./screenshots/pin-04-actions.jpg" width="640" height="756" alt="画像のコピー、共有と保存、文字認識、QR読み取り、履歴を開くメニュー" loading="lazy" decoding="async"></a>
+            <figcaption>PINの操作メニュー</figcaption>
+          </figure>
+        </div>
       </article>
       <article class="release" id="notes" aria-labelledby="locknote-title">
         <div class="release-head">
@@ -175,7 +216,8 @@
         <p>ロック画面で読み書きできる付箋。黄色い見出しをつまんで移動。本文は約4行から始まり、書いた分だけ広がる。</p>
         <p class="spec">iOS 15 · Dopamine Rootless向け</p>
         <details class="tweak-details"><summary>使い方と対応環境</summary><ol><li>Notesの上の帯をドラッグして移動。歯車で背景の透明度を変える。</li><li>「−」で畳む。背景を完全に透過しても、畳んだ黄色いNotesは残り、そのまま移動できる。</li></ol><p>iOS 15・Dopamine Rootless向け。本文は端末に保存され、ロック解除前の画面にも表示される。</p></details>
-        <div class="tweak-gallery" role="group" aria-label="LockNoteのスクリーンショット">
+        <h3 class="gallery-heading" id="notes-screenshots">スクリーンショット</h3>
+        <div class="tweak-gallery" role="group" aria-labelledby="notes-screenshots">
           <figure>
             <a href="./screenshots/locknote-01-expanded.jpg" aria-label="開いた状態の画像を拡大"><img src="./screenshots/locknote-01-expanded.jpg" width="560" height="1212" alt="ロック画面に表示した、黄色い見出しと透ける罫線付きのメモ" loading="lazy" decoding="async"></a>
             <figcaption>開いた状態</figcaption>
@@ -193,6 +235,15 @@
       <footer><a href="https://puteihirose.com/">Ｐ.Ｈ.Ｓ 公式サイト ↗</a></footer>
     </div>
   </main>
+  <dialog class="screenshot-dialog" id="screenshot-viewer" aria-label="スクリーンショットの拡大表示">
+    <form class="screenshot-close" method="dialog"><button class="button secondary" autofocus>閉じる</button></form>
+    <img id="screenshot-image" alt="">
+    <div class="screenshot-controls">
+      <button class="button secondary" type="button" id="screenshot-prev">前へ</button>
+      <span class="screenshot-caption" id="screenshot-caption" aria-live="polite"></span>
+      <button class="button secondary" type="button" id="screenshot-next">次へ</button>
+    </div>
+  </dialog>
   <script>
     const copy = document.getElementById('copy-address');
     const address = document.getElementById('repo-address');
@@ -206,6 +257,47 @@
           status.textContent = 'コピーしたURLをSileoの「リポジトリ」→「＋」に貼り付けてね。';
         } catch {
           status.textContent = '上のURLを長押ししてコピーしてね。';
+        }
+      });
+    }
+
+    const viewer = document.getElementById('screenshot-viewer');
+    const preview = document.getElementById('screenshot-image');
+    const caption = document.getElementById('screenshot-caption');
+    const previous = document.getElementById('screenshot-prev');
+    const next = document.getElementById('screenshot-next');
+    let screenshots = [];
+    let current = 0;
+
+    function showScreenshot(index) {
+      if (index < 0 || index >= screenshots.length) return;
+      current = index;
+      const link = screenshots[current];
+      preview.src = link.href;
+      preview.alt = link.querySelector('img').alt;
+      caption.textContent = link.closest('figure').querySelector('figcaption').textContent;
+      previous.disabled = current === 0;
+      next.disabled = current === screenshots.length - 1;
+    }
+
+    if (typeof viewer.showModal === 'function') {
+      for (const gallery of document.querySelectorAll('.tweak-gallery')) {
+        const links = [...gallery.querySelectorAll('a')];
+        gallery.addEventListener('click', (event) => {
+          const link = event.target.closest('a');
+          if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          screenshots = links;
+          showScreenshot(links.indexOf(link));
+          viewer.showModal();
+        });
+      }
+      previous.addEventListener('click', () => showScreenshot(current - 1));
+      next.addEventListener('click', () => showScreenshot(current + 1));
+      viewer.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+          event.preventDefault();
+          showScreenshot(current + (event.key === 'ArrowLeft' ? -1 : 1));
         }
       });
     }

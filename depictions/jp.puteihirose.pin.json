@@ -32,6 +32,50 @@
           "markdown": "iOS 15・Dopamine Rootless向け。アプリをまたぐ基本表示は0.1.0で確認済み。0.4.0のスクショボタンからの起動は実機確認待ち。"
         }
       ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "スクリーンショット",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{170, 368}",
+          "screenshots": [
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/pin-01-capture-options.jpg",
+              "accessibilityText": "撮り方を選ぶ。通常のスクショと範囲の切り取りを選ぶメニュー"
+            },
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/pin-02-pinned-image.jpg",
+              "accessibilityText": "画像を画面に固定。切り取った画像をツールバー付きで画面上に固定した状態"
+            },
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/pin-03-multiple-pins.jpg",
+              "accessibilityText": "複数枚を同時に固定。複数の画像を重ねて画面に固定した状態"
+            }
+          ]
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "撮り方を選ぶ → 画像を画面に固定 → 複数枚を同時に固定"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "PINの操作メニュー"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{292, 345}",
+          "screenshots": [
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/pin-04-actions.jpg",
+              "accessibilityText": "PINの操作メニュー。画像のコピー、共有と保存、文字認識、QR読み取り、履歴を開くメニュー"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

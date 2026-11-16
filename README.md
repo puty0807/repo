@@ -5,7 +5,7 @@
 [配布ページ](https://puty0807.github.io/repo/)の「Sileoで追加」から登録すると、Sileoでインストール・更新できる。
 
 - [Keyboardのスクリーンショット](https://puty0807.github.io/repo/#keyboard)
-- [PINの使い方](https://puty0807.github.io/repo/#pin)
+- [PINの使い方とスクリーンショット](https://puty0807.github.io/repo/#pin)
 - [LockNoteのスクリーンショット](https://puty0807.github.io/repo/#notes)
 - [Ｐ.Ｈ.Ｓ 公式サイト](https://puteihirose.com/)
 
