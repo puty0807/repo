@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'debs/**'
+      - '.github/workflows/rebuild-packages.yml'
   workflow_dispatch:
 
 permissions:
@@ -52,5 +53,9 @@ jobs:
             echo "Index unchanged"
           else
             git commit -m "Refresh Sileo package metadata"
+            # Another commit can land while the package index is rebuilding
+            # (e.g. landing page edits). Replay the index update on top of it.
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
