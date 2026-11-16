@@ -49,6 +49,23 @@ Description: Displays P.H.S KEY above the native iOS editing menu, then restores
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 
+Package: jp.puteihirose.keyboard
+Version: 0.0.13
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 204
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Recommends: com.opa334.libsandy (>= 1.1.6)
+Filename: ./debs/jp.puteihirose.keyboard_0.0.13_iphoneos-arm64.deb
+Size: 46358
+MD5sum: ac480cbcef3a3c816e8c74fd690a3587
+SHA1: e7155825923151f4e004d9909fe91da05ae5b67a
+SHA256: bd2adec9ec2ffcecea78fcfe5ce61af1a93d3c86dc062c308d38228c6cf3c022
+Section: Tweaks
+Description: Adds fail-closed Home Spotlight search toolbar support while retaining iOS 15 KEY/CLIP behavior.
+Author: Putei Hirose
+Name: P.H.S KEYBOARD (Prototype)
+
 Package: jp.puteihirose.locknote
 Version: 0.1.2
 Architecture: iphoneos-arm64
