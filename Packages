@@ -1,3 +1,20 @@
+Package: jp.puteihirose.keyboard
+Version: 0.0.10
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 200
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Recommends: com.opa334.libsandy (>= 1.1.6)
+Filename: ./debs/jp.puteihirose.keyboard_0.0.10_iphoneos-arm64.deb
+Size: 44092
+MD5sum: 83e1e3e42b2c1cc75113835648ded346
+SHA1: cc1a8b557e9314c0458df6b7db731d6da5191dc9
+SHA256: 860e61f2b549cd56749731708a76606b03624cf4af43c4c2ae5d4a8e1e99d2b5
+Section: Tweaks
+Description: UIKit input toolbar beta: avoids chat composer Send/Plus overlap; retained CLIP history.
+Author: Putei Hirose
+Name: P.H.S KEYBOARD (Prototype)
+
 Package: jp.puteihirose.locknote
 Version: 0.1.2
 Architecture: iphoneos-arm64
@@ -6,6 +23,8 @@ Installed-Size: 92
 Depends: firmware (>= 15.0), firmware (<< 16.0)
 Filename: ./debs/jp.puteihirose.locknote_0.1.2_iphoneos-arm64.deb
 Size: 12864
+MD5sum: 03db76b789df9d88295a702496e1fb17
+SHA1: 2a4d45ad091c23a9fbaff4e037f4dab535f84c4c
 SHA256: a6138c184aaf25a3952926f7ae9938187f3716d42c0f46c6fd5646eb141a326a
 Section: Tweaks
 Description: An editable sticky note for the iOS 15 Lock Screen.
