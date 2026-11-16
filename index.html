@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#f6f2e8">
   <title>Ｐ.Ｈ.Ｓ | パッケージ一覧</title>
   <link rel="icon" type="image/png" href="./CydiaIcon.png">
-  <link rel="stylesheet" href="./explorer.css?v=5">
-  <script src="./i18n.js?v=1" defer></script>
-  <script src="./explorer.js?v=4" defer></script>
+  <link rel="stylesheet" href="./explorer.css?v=6">
+  <script src="./i18n.js?v=2" defer></script>
+  <script src="./explorer.js?v=5" defer></script>
 </head>
 <body>
   <main class="layout">
@@ -18,6 +18,41 @@
         <div><h1 id="source-title">Ｐ.Ｈ.Ｓ</h1><p>ツイークの詳細</p></div>
       </div>
     </header>
+
+
+    <section class="install-panel" aria-labelledby="install-title">
+      <div class="install-heading">
+        <div>
+          <h2 id="install-title">リポジトリを追加</h2>
+          <p>使っているパッケージマネージャーを選んで、登録画面を開ける。</p>
+        </div>
+        <span class="install-compatibility">iOS 15 · Rootless</span>
+      </div>
+      <div class="manager-links">
+        <a class="manager-link" href="sileo://source/https://puty0807.github.io/repo/" aria-label="SileoでＰ.Ｈ.Ｓのリポジトリを追加">
+          <span class="manager-icon manager-sileo" aria-hidden="true">S</span>
+          <span class="manager-name"><strong>Sileo</strong><small>タップして追加</small></span>
+          <span class="manager-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="manager-link" href="zbra://sources/add/https://puty0807.github.io/repo/" aria-label="ZebraでＰ.Ｈ.Ｓのリポジトリを追加">
+          <span class="manager-icon manager-zebra" aria-hidden="true">Z</span>
+          <span class="manager-name"><strong>Zebra</strong><small>タップして追加</small></span>
+          <span class="manager-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="manager-link" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://puty0807.github.io/repo/" aria-label="CydiaでＰ.Ｈ.Ｓのリポジトリを追加">
+          <span class="manager-icon manager-cydia" aria-hidden="true">C</span>
+          <span class="manager-name"><strong>Cydia</strong><small>タップして追加</small></span>
+          <span class="manager-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="install-manual">
+        <span class="install-manual-label">手動登録用URL</span>
+        <code id="repository-url">https://puty0807.github.io/repo/</code>
+        <button class="control" type="button" id="copy-repository-url">URLをコピー</button>
+      </div>
+      <p class="install-note">各アプリが必要だよ。ボタンを押した後、アプリ側で追加を確認してね。</p>
+      <p class="install-copy-status" id="install-copy-status" role="status" aria-live="polite"></p>
+    </section>
 
     <section class="explorer" aria-labelledby="explorer-title">
       <header class="explorer-heading">
@@ -34,7 +69,7 @@
         <p>条件に合うパッケージがないよ。</p>
         <button type="button" class="control" id="clear-filters">検索条件をクリア</button>
       </div>
-      <noscript><p>一覧を表示するにはJavaScriptを有効にしてね。ソース登録はＰ.Ｈ.ＳのPROFILEから。</p></noscript>
+      <noscript><p>一覧を表示するにはJavaScriptを有効にしてね。リポジトリ登録ボタンは上から利用できる。</p></noscript>
     </section>
     <footer><a href="https://puteihirose.com/profile/">Ｐ.Ｈ.Ｓ PROFILE ↗</a></footer>
   </main>
