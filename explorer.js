@@ -161,6 +161,7 @@ function setMetadata(entry) {
 
 function showRequestedPackage() {
   const entry = entries.find((candidate) => `#${candidate.slug}` === location.hash);
+  if (entry?.slug !== activeSlug && viewer.hasAttribute('open')) closeDialog(viewer);
   if (!entry) {
     if (packageDialog.hasAttribute('open')) {
       activeSlug = null;
