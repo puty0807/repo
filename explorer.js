@@ -63,8 +63,8 @@ document.addEventListener('keydown', (event) => {
 const featured = [
   {
     slug: 'keyboard', id: 'jp.puteihirose.keyboard', name: 'P.H.S KEYBOARD',
-    version: '0.0.15', icon: '⌨',
-    summary: '入力編集とCLIP履歴。LINE・ChatGPTは本人の同意で共通履歴に参加できるベータ版。',
+    version: '0.0.14', icon: '⌨',
+    summary: '文字編集・CLIP履歴とSpotlightの純正編集メニュー対応。0.0.15は不具合のため配布停止。',
     keywords: 'キーボード コピー CLIP クリップボード 入力 テキスト 履歴'
   },
   {
