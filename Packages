@@ -88,6 +88,24 @@ Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
 
+Package: jp.puteihirose.keyboard
+Version: 0.0.16
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 204
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Recommends: com.opa334.libsandy (>= 1.1.6)
+Filename: ./debs/jp.puteihirose.keyboard_0.0.16_iphoneos-arm64.deb
+Size: 49656
+MD5sum: 948b3cdb37aca9852916e1a82e64b2e5
+SHA1: c0be3cefd2444f940f6677b971602cd383520318
+SHA256: 2d0983d15122a6e2e2ca71b6e50787862347b6d15ee0cf4f27a358ddd7da7e27
+Section: Tweaks
+Description: Adds collision-aware automatic KEY placement and a drag grip with per-app saved vertical position.
+Author: Putei Hirose
+Name: P.H.S KEYBOARD (Prototype)
+SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+
 Package: jp.puteihirose.locknote
 Version: 0.1.2
 Architecture: iphoneos-arm64
