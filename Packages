@@ -66,6 +66,23 @@ Description: Adds fail-closed Home Spotlight search toolbar support while retain
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 
+Package: jp.puteihirose.keyboard
+Version: 0.0.14
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 204
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Recommends: com.opa334.libsandy (>= 1.1.6)
+Filename: ./debs/jp.puteihirose.keyboard_0.0.14_iphoneos-arm64.deb
+Size: 47082
+MD5sum: f91c21cbcc2a8c78271a744e4442b626
+SHA1: 6936f1804bdc959907cffb97c76f882672a9766d
+SHA256: 61553d32d072b3de5ea3d83b2e17009d1fcece78c319d589188e6e873794b838
+Section: Tweaks
+Description: Fixes Spotlight native edit menu overlap by preserving KEY at a safe position and restoring it after menu dismissal.
+Author: Putei Hirose
+Name: P.H.S KEYBOARD (Prototype)
+
 Package: jp.puteihirose.locknote
 Version: 0.1.2
 Architecture: iphoneos-arm64
