@@ -11,7 +11,7 @@
     'URLをコピー': 'Copy URL',
     'コピーしたよ': 'URL copied',
     'コピーできなかったよ。URLを長押ししてコピーしてね。': 'Could not copy automatically. Touch and hold the URL to copy it.',
-    '各アプリが必要だよ。ボタンを押した後、アプリ側で追加を確認してね。': 'The corresponding app must be installed. Confirm the addition inside the app.',
+    '登録先はＰ.Ｈ.Ｓ PROFILEに統一しているよ。各アプリで追加を確認してね。': 'P.H.S PROFILE is the canonical source. Confirm the addition in your package manager.',
     'SileoでＰ.Ｈ.Ｓのリポジトリを追加': 'Add the P.H.S repository to Sileo',
     'ZebraでＰ.Ｈ.Ｓのリポジトリを追加': 'Add the P.H.S repository to Zebra',
     'CydiaでＰ.Ｈ.Ｓのリポジトリを追加': 'Add the P.H.S repository to Cydia',
