@@ -60,22 +60,6 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-const sourceLink = document.querySelector('.source-actions a');
-const sourceAddress = sourceLink.getAttribute('href').slice('sileo://source/'.length);
-const copyStatus = get('copy-status');
-
-get('copy-source').addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(sourceAddress);
-    copyStatus.textContent = 'ソース追加用のURLをコピーしたよ。';
-  } catch {
-    const link = document.createElement('a');
-    link.href = sourceAddress;
-    link.textContent = sourceAddress;
-    copyStatus.replaceChildren('このURLを長押ししてコピーしてね。 ', link);
-  }
-});
-
 const featured = [
   {
     slug: 'keyboard', id: 'jp.puteihirose.keyboard', name: 'P.H.S KEYBOARD',
