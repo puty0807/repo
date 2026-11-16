@@ -32,6 +32,23 @@ Description: Dynamically repositions P.H.S KEYBOARD on input-method and keyboard
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 
+Package: jp.puteihirose.keyboard
+Version: 0.0.12
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 204
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Recommends: com.opa334.libsandy (>= 1.1.6)
+Filename: ./debs/jp.puteihirose.keyboard_0.0.12_iphoneos-arm64.deb
+Size: 45464
+MD5sum: a077e22a52cc84cd4b82ac3bed703638
+SHA1: 4ea5cfd9c4a815f6a2fb169c73c8fe92fb53f956
+SHA256: 318e2ea4fe5418e1e0bb332b53ce5cd3ea8120a5580273914da38b4d123f24cf
+Section: Tweaks
+Description: Displays P.H.S KEY above the native iOS editing menu, then restores its normal keyboard position.
+Author: Putei Hirose
+Name: P.H.S KEYBOARD (Prototype)
+
 Package: jp.puteihirose.locknote
 Version: 0.1.2
 Architecture: iphoneos-arm64
