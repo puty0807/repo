@@ -88,24 +88,6 @@ Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
 
-Package: jp.puteihirose.keyboard
-Version: 0.0.15
-Architecture: iphoneos-arm64
-Maintainer: Putei Hirose
-Installed-Size: 204
-Depends: firmware (>= 15.0), firmware (<< 16.0)
-Recommends: com.opa334.libsandy (>= 1.1.6)
-Filename: ./debs/jp.puteihirose.keyboard_0.0.15_iphoneos-arm64.deb
-Size: 48608
-MD5sum: d8129cbe8d9284de551f0ba3b16c4ef5
-SHA1: 1004fea61d2e5820469e36974a2fffb5009ad334
-SHA256: 49d8696d4e252933bb111ef9dfae1fee404085f13397cc2bfce56771fcd31204
-Section: Tweaks
-Description: Optional common CLIP history pilot for LINE and ChatGPT; privacy-preserving app allowlist and legacy migration.
-Author: Putei Hirose
-Name: P.H.S KEYBOARD (Prototype)
-SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
-
 Package: jp.puteihirose.locknote
 Version: 0.1.2
 Architecture: iphoneos-arm64
