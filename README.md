@@ -2,7 +2,7 @@
 
 広瀬プティの脱獄ツイーク配布リポジトリ。
 
-[配布ページ](https://puty0807.github.io/repo/)からSileo・Zebra・Cydiaのソース追加画面を開ける。パッケージはiOS 15・Dopamine Rootless向け。Zebra・Cydiaでの動作は実機確認待ち。
+[本家PROFILE](https://puteihirose.com/profile/)の「JAILBREAK」からSileo・Zebra・Cydiaに追加できる。[ツイーク詳細](https://puty0807.github.io/repo/)では使い方とスクリーンショットを確認できる。パッケージはiOS 15・Dopamine Rootless向け。Zebra・Cydiaでの動作は実機確認待ち。
 
 - [Keyboardのスクリーンショット](https://puty0807.github.io/repo/#keyboard)
 - [PINの使い方とスクリーンショット](https://puty0807.github.io/repo/#pin)
