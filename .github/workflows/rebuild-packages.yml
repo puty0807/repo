@@ -24,8 +24,13 @@ jobs:
           sudo apt-get install -y -qq dpkg-dev bzip2
           dpkg-scanpackages --multiversion debs /dev/null | sed 's|^Filename: debs/|Filename: ./debs/|' > Packages
           test -s Packages
+          python3 scripts/attach-depictions.py
           gzip -9n -c Packages > Packages.gz
           bzip2 -9 -c Packages > Packages.bz2
+          if git diff --quiet -- Packages Packages.gz Packages.bz2; then
+            echo 'Package indexes unchanged'
+            exit 0
+          fi
           {
             printf '%s\n' 'Origin: Ｐ.Ｈ.Ｓ' 'Label: Ｐ.Ｈ.Ｓ' 'Suite: stable' 'Codename: stable'
             printf '%s\n' 'Version: 1.0' 'Architectures: iphoneos-arm64' 'Components: main'

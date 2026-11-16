@@ -1,0 +1,37 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "詳細",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "ロック画面に置ける小さな付箋"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "黄色いNotesの見出しと、薄い罫線入りの紙。本文は約4行分から始まり、改行や折り返しに合わせて伸びる。"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "使い方"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "1. Notesの上の帯をドラッグして移動。歯車で背景の透明度を変える。\n2. 「−」で畳む。背景を完全に透過しても、畳んだ黄色いNotesは残り、そのまま移動できる。"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "バージョン",
+          "text": "0.1.2 Beta"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "iOS 15・Dopamine Rootless向け。本文は端末に保存され、ロック解除前の画面にも表示される。"
+        }
+      ]
+    }
+  ]
+}

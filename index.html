@@ -94,6 +94,13 @@
     .release .spec { border-top: 1px solid #3b3023; padding-top: .65rem; font-size: .8rem; }
     footer { display: flex; justify-content: flex-end; padding: 1.35rem 0 2.25rem; color: var(--gold); font-size: .83rem; }
     footer a { text-underline-offset: .25em; }
+
+    .tweak-details { margin-top: .9rem; color: var(--muted); font-size: .88rem; }
+    .tweak-details summary { cursor: pointer; color: var(--gold); }
+    .tweak-details ol { padding-left: 1.35rem; margin-bottom: .8rem; }
+    .tweak-details li + li { margin-top: .35rem; }
+    .tweak-gallery { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0; }
+    .tweak-gallery img { display: block; max-height: 20rem; max-width: 13rem; border-radius: 8px; }
   </style>
 </head>
 <body>
@@ -119,6 +126,7 @@
         <p>Spotlightで「全選」を押すと純正の「テキストをスキャン」が上部に出てKEYが消える問題を修正。上に余白がない時はKEYをキーボード直上に維持し、純正メニューが閉じたら通常位置へ復帰。</p>
         <p class="spec">iOS 15 · Dopamine Rootless · arm64e／インストール後にリスプリングが必要。Spotlightは実機検証待ち。共通履歴はメモ・Safari・メッセージ・メールに限定。</p>
         <p><a href="./debs/jp.puteihirose.keyboard_0.0.14_iphoneos-arm64.deb" download>0.0.14のDEBを直接ダウンロード</a></p>
+        <details class="tweak-details"><summary>使い方と対応環境</summary><ol><li>入力欄を開き、キーボード上のP.H.S KEYから編集する。</li><li>CLIPから履歴やお気に入りを開く。共通履歴はメモ・Safari・メッセージ・メールが対象。</li><li>Spotlight検索の対応は試験中。0.0.14では純正の「テキストをスキャン」が出たときの位置調整を見直した。</li></ol><p>iOS 15・Dopamine Rootless向け。アプリの入力欄によって表示は異なる。Spotlightの0.0.14の変更は実機再確認待ち。</p></details>
       </article>
       <article class="release" aria-labelledby="pin-title">
         <div class="release-head">
@@ -128,6 +136,7 @@
         <p>サイドボタン＋音量上から、通常のスクショか範囲の切り取りを選べる。切り取った画像を複数枚ピン留めできる。</p>
         <p class="spec">iOS 15 · Dopamine Rootless向け。スクショボタンからの起動は実機確認待ち。</p>
         <p><a href="./debs/jp.puteihirose.pin_0.4.0_iphoneos-arm64.deb" download>0.4.0のDEBを直接ダウンロード</a></p>
+        <details class="tweak-details"><summary>使い方と対応環境</summary><ol><li>サイドボタン＋音量上を押し、「通常のスクショ」か「範囲を切り取る」を選ぶ。</li><li>範囲をなぞって「固定」。コピー済みの画像は、端のピンから追加できる。</li><li>「…」からコピー・共有、OCR、QR読み取り。端のピンから直近12件の履歴を開ける。</li></ol><p>iOS 15・Dopamine Rootless向け。アプリをまたぐ基本表示は0.1.0で確認済み。0.4.0のスクショボタンからの起動は実機確認待ち。</p></details>
       </article>
       <article class="release" aria-labelledby="locknote-title">
         <div class="release-head">
@@ -136,6 +145,7 @@
         </div>
         <p>ロック画面で読み書きできる付箋。黄色い見出しをつまんで移動。本文は約4行から始まり、書いた分だけ広がる。</p>
         <p class="spec">iOS 15 · Dopamine Rootless向け</p>
+        <details class="tweak-details"><summary>使い方と対応環境</summary><ol><li>Notesの上の帯をドラッグして移動。歯車で背景の透明度を変える。</li><li>「−」で畳む。背景を完全に透過しても、畳んだ黄色いNotesは残り、そのまま移動できる。</li></ol><p>iOS 15・Dopamine Rootless向け。本文は端末に保存され、ロック解除前の画面にも表示される。</p></details>
       </article>
       <footer><a href="https://puteihirose.com/">Ｐ.Ｈ.Ｓ 公式サイト ↗</a></footer>
     </div>

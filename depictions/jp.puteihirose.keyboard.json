@@ -1,0 +1,37 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "詳細",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "入力中に使う編集とクリップ履歴"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "対応アプリのキーボード上に、選択・コピー・切り取り・貼り付け・Undo・カーソル移動をまとめた操作バーを追加する。"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "使い方"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "1. 入力欄を開き、キーボード上のP.H.S KEYから編集する。\n2. CLIPから履歴やお気に入りを開く。共通履歴はメモ・Safari・メッセージ・メールが対象。\n3. Spotlight検索の対応は試験中。0.0.14では純正の「テキストをスキャン」が出たときの位置調整を見直した。"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "バージョン",
+          "text": "0.0.14 Beta"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "iOS 15・Dopamine Rootless向け。アプリの入力欄によって表示は異なる。Spotlightの0.0.14の変更は実機再確認待ち。"
+        }
+      ]
+    }
+  ]
+}

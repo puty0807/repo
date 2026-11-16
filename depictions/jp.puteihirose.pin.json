@@ -1,0 +1,37 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "詳細",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "スクショの必要な部分だけ、画面に残す"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "画像を複数枚浮かべて、別のアプリを見ながら参照できる。画像ごとに移動、拡大縮小、透過、折りたたみができる。"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "使い方"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "1. サイドボタン＋音量上を押し、「通常のスクショ」か「範囲を切り取る」を選ぶ。\n2. 範囲をなぞって「固定」。コピー済みの画像は、端のピンから追加できる。\n3. 「…」からコピー・共有、OCR、QR読み取り。端のピンから直近12件の履歴を開ける。"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "バージョン",
+          "text": "0.4.0 Beta"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "iOS 15・Dopamine Rootless向け。アプリをまたぐ基本表示は0.1.0で確認済み。0.4.0のスクショボタンからの起動は実機確認待ち。"
+        }
+      ]
+    }
+  ]
+}
