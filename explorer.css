@@ -130,3 +130,19 @@ dialog::backdrop { background: #151006a6; }
 .legacy-modal-open { overflow: hidden; }
 .legacy-backdrop { position: fixed; inset: 0; background: #151006a6; }
 .legacy-dialog[open] { position: fixed; inset: 50% auto auto 50%; transform: translate(-50%, -50%); margin: 0; max-height: 90vh; overflow: auto; }
+
+/* Accessible, compact language switch that preserves the existing layout. */
+.source { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; }
+.brand { min-width: 0; }
+.language-switch { display: inline-flex; flex: none; gap: 0; padding: 3px; border: var(--rule); background: var(--paper); }
+.language-button {
+  min-height: 38px; min-width: 45px; padding: .3rem .6rem;
+  border: 0; background: transparent; color: var(--muted);
+  font: 750 .83rem/1 system-ui, sans-serif; cursor: pointer;
+}
+.language-button:hover { background: #eee4cc; }
+.language-button.is-active { background: var(--ink); color: #fffefa; }
+.language-button:focus-visible { outline-offset: 1px; }
+@media (max-width: 400px) {
+  .source { align-items: flex-start; }
+}

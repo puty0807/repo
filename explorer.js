@@ -90,7 +90,7 @@ const packageDialog = get('package-dialog');
 let entries = featured;
 let activeSlug = null;
 
-const categoryName = (value) => value === 'Tweaks' ? 'ツイーク' : value;
+const categoryName = (value) => window.PHSI18N.translate(value === 'Tweaks' ? 'ツイーク' : value);
 const architectureName = (value) => ({
   'iphoneos-arm64': 'arm64 · Rootless', 'iphoneos-arm': 'arm · Rootful',
   'iphoneos-arm64e': 'arm64e'
@@ -101,7 +101,7 @@ const byline = (entry) => [entry.version && `v${entry.version}`, entry.author].f
 function updateCategories() {
   const selected = category.value;
   const values = [...new Set(entries.map((entry) => entry.category))].sort();
-  category.replaceChildren(new Option('すべてのカテゴリ', ''));
+  category.replaceChildren(new Option(window.PHSI18N.translate('すべてのカテゴリ'), ''));
   for (const value of values) category.add(new Option(categoryName(value), value));
   if (values.includes(selected)) category.value = selected;
 }
@@ -110,7 +110,8 @@ function renderCards() {
   const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
   const cards = [];
   for (const entry of entries) {
-    const description = normalize([entry.name, entry.id, entry.summary, entry.keywords, entry.author].join(' '));
+    const description = normalize([entry.name, entry.id, entry.summary, entry.keywords, entry.author,
+      window.PHSI18N.english(entry.summary), window.PHSI18N.english(entry.keywords), window.PHSI18N.english(entry.author)].join(' '));
     if (category.value && category.value !== entry.category) continue;
     if (!terms.every((term) => description.includes(term))) continue;
     const card = get('package-card').content.cloneNode(true);
@@ -121,14 +122,15 @@ function renderCards() {
     card.querySelector('.byline').textContent = byline(entry);
     card.querySelector('.category-tag').textContent = categoryName(entry.category);
     card.querySelector('.architecture-tag').textContent = architectureName(entry.architecture);
-    card.querySelector('.package-summary').textContent = entry.summary;
+    card.querySelector('.package-summary').textContent = window.PHSI18N.translate(entry.summary);
     const action = card.querySelector('.card-action');
     action.href = `#${entry.slug}`;
-    action.setAttribute('aria-label', `${entry.name}の詳細を見る`);
+    action.setAttribute('aria-label', window.PHSI18N.language() === 'en' ? 'View details for ' + entry.name : entry.name + 'の詳細を見る');
     cards.push(card);
   }
   grid.replaceChildren(...cards);
-  get('result-count').textContent = `${cards.length}件のパッケージ`;
+  window.PHSI18N.translateElement(grid);
+  get('result-count').textContent = window.PHSI18N.count(cards.length);
   get('no-results').hidden = cards.length > 0;
 }
 
@@ -137,7 +139,7 @@ function setMetadata(entry) {
   get('package-byline').textContent = byline(entry);
   get('detail-category').textContent = categoryName(entry.category);
   get('detail-architecture').textContent = architectureName(entry.architecture);
-  get('detail-summary').textContent = entry.summary;
+  get('detail-summary').textContent = window.PHSI18N.translate(entry.summary);
   get('detail-version').textContent = entry.version;
   get('detail-arch-value').textContent = entry.architecture;
   get('detail-id').textContent = entry.id;
@@ -160,6 +162,7 @@ function showRequestedPackage() {
     activeSlug = entry.slug;
     packageDialog.scrollTop = 0;
   }
+  window.PHSI18N.translateElement(packageDialog);
   if (!packageDialog.hasAttribute('open')) openDialog(packageDialog);
 }
 
@@ -172,6 +175,21 @@ get('clear-filters').addEventListener('click', () => {
   search.focus();
 });
 window.addEventListener('hashchange', showRequestedPackage);
+
+document.addEventListener('phs:languagechange', () => {
+  updateCategories();
+  renderCards();
+  if (!activeSlug) return;
+  const entry = entries.find((candidate) => candidate.slug === activeSlug);
+  if (!entry) return;
+  const scrollTop = packageDialog.scrollTop;
+  const template = get(entry.slug + '-detail');
+  get('package-content').replaceChildren(...(template ? [template.content.cloneNode(true)] : []));
+  setMetadata(entry);
+  window.PHSI18N.translateElement(packageDialog);
+  packageDialog.scrollTop = scrollTop;
+});
+
 packageDialog.addEventListener('close', () => {
   if (location.hash === `#${activeSlug}`) history.replaceState(null, '', location.pathname + location.search);
   activeSlug = null;
