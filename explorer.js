@@ -63,8 +63,8 @@ document.addEventListener('keydown', (event) => {
 const featured = [
   {
     slug: 'keyboard', id: 'jp.puteihirose.keyboard', name: 'P.H.S KEYBOARD',
-    version: '0.0.14', icon: '⌨',
-    summary: '文字編集・CLIP履歴とSpotlightの純正編集メニュー対応。0.0.15は不具合のため配布停止。',
+    version: '0.0.16', icon: '⌨',
+    summary: 'バーの自動配置を強化。つまみで上下に移動・位置保存・タップで自動復帰。CLIPは0.0.14のまま。',
     keywords: 'キーボード コピー CLIP クリップボード 入力 テキスト 履歴'
   },
   {
