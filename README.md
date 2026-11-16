@@ -2,7 +2,11 @@
 
 広瀬プティのSileo向けツイーク配布リポジトリ。
 
-- [配布ページ](https://puty0807.github.io/repo/)
+[配布ページ](https://puty0807.github.io/repo/)の「Sileoで追加」から登録すると、Sileoでインストール・更新できる。
+
+- [Keyboardのスクリーンショット](https://puty0807.github.io/repo/#keyboard)
+- [PINの使い方](https://puty0807.github.io/repo/#pin)
+- [LockNoteのスクリーンショット](https://puty0807.github.io/repo/#notes)
 - [Ｐ.Ｈ.Ｓ 公式サイト](https://puteihirose.com/)
 
 ## LockNote 0.1.2（試験版）
@@ -24,10 +28,6 @@
 - 新しいアプリでの自動記録は初期状態OFF。通常アプリのパスワード欄にもバーを表示する設計だが、自動記録はUIKitで保護入力と判定できる欄では抑止する。
 - **ビルド検証済み／Spotlightでの「全選」→「テキストをスキャン」は実機再検証待ち。** 更新後はSpringBoardへ読み込むためリスプリングが必要。Spotlightの履歴はアプリ共通履歴とは別。SpringBoardに不具合が出た場合は0.0.12へ戻す。
 
-[直接DEBを取得](https://puty0807.github.io/repo/debs/jp.puteihirose.keyboard_0.0.14_iphoneos-arm64.deb)
-
 ## P.H.S PIN 0.4.0（Beta / 実機確認待ち）
 
 サイドボタン＋音量上から、通常のスクショか範囲の切り取りを選べる。切り取った画像を複数枚ピン留めできる。
-
-[直接DEBを取得](https://puty0807.github.io/repo/debs/jp.puteihirose.pin_0.4.0_iphoneos-arm64.deb)

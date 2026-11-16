@@ -32,6 +32,72 @@
           "markdown": "iOS 15・Dopamine Rootless向け。アプリの入力欄によって表示は異なる。Spotlightの0.0.14の変更は実機再確認待ち。"
         }
       ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "スクリーンショット",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "P.H.S KEYの編集バー"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{308, 154}",
+          "screenshots": [
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/keyboard-01-editor.jpg",
+              "accessibilityText": "P.H.S KEYの編集バー。切り取り・コピー・貼り付け・全選択・取り消し・カーソル移動・履歴を開くボタン"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "P.H.S CLIPのコピー履歴"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{170, 368}",
+          "screenshots": [
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/keyboard-02-clip-history.jpg",
+              "accessibilityText": "P.H.S CLIPのコピー履歴。検索欄、カテゴリの絞り込み、固定した項目とコピー履歴の一覧"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "履歴を整理"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{308, 355}",
+          "screenshots": [
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/keyboard-03-clip-organize.jpg",
+              "accessibilityText": "履歴を整理。履歴を長押しして固定・お気に入り・カテゴリを設定するメニュー"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "CLIPの設定"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{308, 237}",
+          "screenshots": [
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/keyboard-04-clip-settings.jpg",
+              "accessibilityText": "CLIPの設定。共通履歴の対象アプリ、自動保存の切り替え、履歴の一括削除"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

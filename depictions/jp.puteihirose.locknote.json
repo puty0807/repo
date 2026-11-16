@@ -32,6 +32,35 @@
           "markdown": "iOS 15・Dopamine Rootless向け。本文は端末に保存され、ロック解除前の画面にも表示される。"
         }
       ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "スクリーンショット",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{170, 368}",
+          "screenshots": [
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/locknote-01-expanded.jpg",
+              "accessibilityText": "開いた状態。ロック画面に表示した、黄色い見出しと透ける罫線付きのメモ"
+            },
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/locknote-02-collapsed.jpg",
+              "accessibilityText": "折りたたんだ状態。折りたたむと黄色いNotesの見出しだけが残る"
+            },
+            {
+              "url": "https://puty0807.github.io/repo/screenshots/locknote-03-opacity.jpg",
+              "accessibilityText": "背景の濃さを調整。歯車から開く背景の濃さのスライダー"
+            }
+          ]
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "左から、開いた状態・折りたたんだ状態・背景の濃さの設定。"
+        }
+      ]
     }
   ]
 }
