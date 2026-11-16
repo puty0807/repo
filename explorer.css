@@ -92,6 +92,8 @@ h1, h2, h3, p, dl, dd, figure { margin: 0; }
 .empty p { margin-bottom: .55rem; }
 footer { display: flex; justify-content: flex-end; padding: 1.2rem 0 2rem; font-size: .84rem; }
 
+/* Safari versions without native dialog support render closed elements inline. */
+dialog:not([open]) { display: none; }
 dialog { padding: 0; color: var(--ink); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); background: var(--surface); }
 dialog::backdrop { background: #151006a6; }
 .package-dialog { width: min(42rem, 100% - 1.5rem); max-height: 90vh; max-height: 90dvh; }
