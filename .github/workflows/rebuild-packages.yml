@@ -1,0 +1,56 @@
+name: Rebuild Sileo package index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'debs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Packages and Release
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq dpkg-dev bzip2
+          dpkg-scanpackages --multiversion debs /dev/null | sed 's|^Filename: debs/|Filename: ./debs/|' > Packages
+          test -s Packages
+          gzip -9n -c Packages > Packages.gz
+          bzip2 -9 -c Packages > Packages.bz2
+          {
+            printf '%s\n' 'Origin: Ｐ.Ｈ.Ｓ' 'Label: Ｐ.Ｈ.Ｓ' 'Suite: stable' 'Codename: stable'
+            printf '%s\n' 'Version: 1.0' 'Architectures: iphoneos-arm64' 'Components: main'
+            printf '%s\n' 'Description: P.H.S jailbreak tweaks for iOS 15 rootless.'
+            printf 'Date: %s\n' "$(LC_ALL=C date -u '+%a, %d %b %Y %H:%M:%S GMT')"
+            echo 'SHA256:'
+            for f in Packages Packages.gz Packages.bz2; do
+              printf ' %s %16s %s\n' "$(sha256sum "$f" | cut -d' ' -f1)" "$(wc -c < "$f" | tr -d ' ')" "$f"
+            done
+            echo 'SHA512:'
+            for f in Packages Packages.gz Packages.bz2; do
+              printf ' %s %16s %s\n' "$(sha512sum "$f" | cut -d' ' -f1)" "$(wc -c < "$f" | tr -d ' ')" "$f"
+            done
+          } > Release
+          grep -q '^Package: jp.puteihirose.locknote$' Packages
+          grep -q '^Package: jp.puteihirose.keyboard$' Packages
+
+      - name: Commit refreshed index
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Packages Packages.gz Packages.bz2 Release
+          if git diff --cached --quiet; then
+            echo "Index unchanged"
+          else
+            git commit -m "Refresh Sileo package metadata"
+            git push origin HEAD:main
+          fi
