@@ -25,3 +25,9 @@
 - **ビルド検証済み／Spotlightでの「全選」→「テキストをスキャン」は実機再検証待ち。** 更新後はSpringBoardへ読み込むためリスプリングが必要。Spotlightの履歴はアプリ共通履歴とは別。SpringBoardに不具合が出た場合は0.0.12へ戻す。
 
 [直接DEBを取得](https://puty0807.github.io/repo/debs/jp.puteihirose.keyboard_0.0.14_iphoneos-arm64.deb)
+
+## P.H.S PIN 0.4.0（Beta / 実機確認待ち）
+
+サイドボタン＋音量上から、通常のスクショか範囲の切り取りを選べる。切り取った画像を複数枚ピン留めできる。
+
+[直接DEBを取得](https://puty0807.github.io/repo/debs/jp.puteihirose.pin_0.4.0_iphoneos-arm64.deb)

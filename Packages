@@ -99,3 +99,19 @@ Description: An editable sticky note for the iOS 15 Lock Screen.
 Author: Putei Hirose
 Name: LockNote
 
+Package: jp.puteihirose.pin
+Version: 0.4.0
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 132
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Filename: ./debs/jp.puteihirose.pin_0.4.0_iphoneos-arm64.deb
+Size: 25554
+MD5sum: 529d180fbc61491ae5387a1593977ab8
+SHA1: 17cfd010ea55e7b4371e61f849410231a1540cc6
+SHA256: 113e253dee83b2897c6b0ea6d4131d1e3353e573556428d2b7d344d8adc79f42
+Section: Tweaks
+Description: Choose a full or cropped capture from the screenshot buttons on iOS 15.
+Author: Putei Hirose
+Name: P.H.S PIN
+
