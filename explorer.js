@@ -83,6 +83,39 @@ const featured = [
   author: '広瀬プティ', category: 'Tweaks', architecture: 'iphoneos-arm64', ...entry
 }));
 
+// Copy the same canonical source URL used by all three package managers.
+const copyRepoButton = get('copy-repository-url');
+if (copyRepoButton) {
+  copyRepoButton.addEventListener('click', async () => {
+    const url = get('repository-url').textContent.trim();
+    let success = false;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(url);
+        success = true;
+      } catch (error) {
+        // Some iOS web views do not grant clipboard access.
+      }
+    }
+    if (!success) {
+      const field = document.createElement('textarea');
+      field.value = url;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.focus();
+      field.select();
+      field.setSelectionRange(0, url.length);
+      try { success = document.execCommand('copy'); } catch (error) { /* fallback failed */ }
+      field.remove();
+    }
+    get('install-copy-status').textContent = window.PHSI18N.translate(success
+      ? 'コピーしたよ'
+      : 'コピーできなかったよ。URLを長押ししてコピーしてね。');
+  });
+}
+
 const grid = get('package-grid');
 const search = get('package-search');
 const category = get('category');

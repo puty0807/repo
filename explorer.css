@@ -146,3 +146,52 @@ dialog::backdrop { background: #151006a6; }
 @media (max-width: 400px) {
   .source { align-items: flex-start; }
 }
+
+
+/* One-tap source registration. Matches the existing paper-and-ink design. */
+.install-panel {
+  margin-bottom: 1.5rem; padding: clamp(1rem, 3.8vw, 1.65rem);
+  background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+}
+.install-heading { display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: .6rem 1rem; }
+.install-heading h2 { font: 750 clamp(1.25rem, 4.5vw, 1.6rem)/1.2 Georgia, "Yu Mincho", serif; }
+.install-heading p { margin-top: .35rem; font-size: .87rem; color: var(--muted); }
+.install-compatibility { border: 1px solid var(--ink); background: #fff0ca; padding: .18rem .45rem; font-size: .74rem; font-weight: 700; white-space: nowrap; }
+.manager-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; margin-top: 1rem; }
+.manager-link {
+  display: flex; align-items: center; min-width: 0; min-height: 76px; gap: .7rem;
+  padding: .65rem .75rem; color: var(--ink); background: white; text-decoration: none;
+  border: var(--rule); box-shadow: 3px 3px 0 var(--ink);
+  transition: background .16s ease, box-shadow .16s ease;
+}
+.manager-link:hover { background: #fff4d9; box-shadow: 4px 4px 0 var(--ink); }
+.manager-link:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.manager-icon {
+  display: grid; flex: 0 0 42px; width: 42px; height: 42px; place-items: center;
+  border: 2px solid var(--ink); border-radius: 11px;
+  color: white; font: 800 1.18rem/1 system-ui, sans-serif;
+}
+.manager-sileo { background: #486e93; }
+.manager-zebra { background: #393b43; }
+.manager-cydia { background: #896346; }
+.manager-name { display: flex; flex-direction: column; min-width: 0; }
+.manager-name strong { font-size: 1rem; line-height: 1.35; }
+.manager-name small { font-size: .73rem; color: var(--muted); }
+.manager-arrow { margin-left: auto; color: var(--accent); font-size: 1.12rem; }
+.install-manual {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .8rem;
+  margin-top: 1.15rem; padding-top: .8rem; border-top: 1px solid #d2c6ac;
+}
+.install-manual-label { font-size: .83rem; font-weight: 700; }
+.install-manual code { flex: 1 1 18rem; min-width: 0; font: .78rem/1.45 monospace; overflow-wrap: anywhere; }
+.install-manual .control { flex: none; min-height: 38px; }
+.install-note { margin-top: .6rem; font-size: .77rem; color: var(--muted); }
+.install-copy-status { font-size: .79rem; font-weight: 700; color: var(--accent); }
+.install-copy-status:empty { display: none; }
+@media (max-width: 750px) {
+  .manager-links { grid-template-columns: minmax(0, 1fr); }
+  .manager-link { min-height: 66px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .manager-link { transition: none; }
+}

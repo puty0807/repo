@@ -4,6 +4,18 @@
 
   var storageKey = 'phs-repo-language';
   var translations = {
+    'リポジトリを追加': 'Add this repository',
+    '使っているパッケージマネージャーを選んで、登録画面を開ける。': 'Choose your package manager to open its Add Source screen.',
+    'タップして追加': 'Tap to add',
+    '手動登録用URL': 'Manual source URL',
+    'URLをコピー': 'Copy URL',
+    'コピーしたよ': 'URL copied',
+    'コピーできなかったよ。URLを長押ししてコピーしてね。': 'Could not copy automatically. Touch and hold the URL to copy it.',
+    '各アプリが必要だよ。ボタンを押した後、アプリ側で追加を確認してね。': 'The corresponding app must be installed. Confirm the addition inside the app.',
+    'SileoでＰ.Ｈ.Ｓのリポジトリを追加': 'Add the P.H.S repository to Sileo',
+    'ZebraでＰ.Ｈ.Ｓのリポジトリを追加': 'Add the P.H.S repository to Zebra',
+    'CydiaでＰ.Ｈ.Ｓのリポジトリを追加': 'Add the P.H.S repository to Cydia',
+    '一覧を表示するにはJavaScriptを有効にしてね。リポジトリ登録ボタンは上から利用できる。': 'Enable JavaScript to browse the packages. The source-registration buttons above work without it.',
     'ツイークの詳細': 'Tweak details',
     'ツイークの説明、スクリーンショット、対応環境を確認できる。': 'Explore tweak descriptions, screenshots, and compatibility.',
     'パッケージ名・機能で検索': 'Search packages or features',
