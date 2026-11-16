@@ -6,12 +6,12 @@ Version: 1.0
 Architectures: iphoneos-arm64
 Components: main
 Description: P.H.S jailbreak tweaks for iOS 15 rootless.
-Date: Mon, 16 Nov 2026 01:28:18 GMT
+Date: Mon, 16 Nov 2026 02:35:34 GMT
 SHA256:
- b9a1dcbd2bfa52c6ef37ba1c5d3459ea40de40f6dd217695edf3f43ed2d895e4             1153 Packages
- 6be8842372e8d28ec39870948af4ac0ff578ca244961d72754b2d81d5055ef0c              632 Packages.gz
- 513dc9d9ce2583e8e8c3d5f83d85c44ac2334cf0df2f0a4e90e1d180167a59d4              723 Packages.bz2
+ 9c9b3d655a1808c9508b3e8c9a6dd5dcc9f320fbfc7ff994745d0f2067d204af             1797 Packages
+ 876c3dfafa6e721b56806b0dacf3b1ff294e5ebc212de0339d0c458a6bfa262f              795 Packages.gz
+ ae62fbe41c9c2575a43b208851ab73de67f75049d154cb67b3dfa1e4faf121ae              943 Packages.bz2
 SHA512:
- 7ef4955a49c27194f10220f7bf24a2255215241430f0295416dd0424ab7c6ab2d8c3cb5b4b20026d238c055238096643471ecd52f8bd0624f162b98b64bacf92             1153 Packages
- 300c9a370511ec2d26679ae7bf6e1034a039c03d7c2c29de01d95b7b6ec96373db0a40a792b57bb16e6cd8a2b5b97ea60c75375bb1a6694381feaedad096d39a              632 Packages.gz
- fd1bd3ee0154cf84f30ef1287ec3ac4e40f8115254c5dc9cdf2c73a6947ab9c81e730c375ac0293faaf826cc811ab390c45eaf9bb4b3e69661c7594677306d11              723 Packages.bz2
+ 3c77cc045f3d704c940bc1ceec15e5df15e503abf9e8ad15c50489ed8aff66f6b20de631de74d1512e02ce51c7d596026832abc3e6ee70809ccb60b49015ed5f             1797 Packages
+ 9328ea3004c54f3db8953fed6bad88c3be16f1a8a03b9d6748d406a5472344f82268d4c0f6f14f5c0da4a2320a9845b7bb0400c63e54d29a5f173878d61ea493              795 Packages.gz
+ f472737ddd9ada0677887d9f419d9575451cb161d0364c6dcf8bfab7ddd66bfe7552ff206cbfbaed9d7d1bb2f3ab325493357c5cbe07bdfa0f5a361d4154945d              943 Packages.bz2

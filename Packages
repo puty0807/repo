@@ -15,6 +15,23 @@ Description: UIKit input toolbar beta: avoids chat composer Send/Plus overlap; r
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 
+Package: jp.puteihirose.keyboard
+Version: 0.0.11
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 200
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Recommends: com.opa334.libsandy (>= 1.1.6)
+Filename: ./debs/jp.puteihirose.keyboard_0.0.11_iphoneos-arm64.deb
+Size: 44760
+MD5sum: 2db1140b748ed01be7028c8051f97d69
+SHA1: d495c21b5d5e5703c384f2f319b48a0d01452abe
+SHA256: 2550a62733a442329ec7f09d711df77f510336405c6a52e4bd798ff734a28c9b
+Section: Tweaks
+Description: Dynamically repositions P.H.S KEYBOARD on input-method and keyboard-height changes; avoids chat controls.
+Author: Putei Hirose
+Name: P.H.S KEYBOARD (Prototype)
+
 Package: jp.puteihirose.locknote
 Version: 0.1.2
 Architecture: iphoneos-arm64
