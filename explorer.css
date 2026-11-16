@@ -27,10 +27,7 @@ h1, h2, h3, p, dl, dd, figure { margin: 0; }
 .brand { display: flex; align-items: center; gap: .8rem; }
 .brand img { border: var(--rule); border-radius: 12px; background: var(--paper); }
 .brand h1 { font: 700 1.65rem/1.12 Georgia, serif; letter-spacing: .015em; }
-.brand p, .source-note, #copy-status { color: var(--muted); font-size: .78rem; }
-.source-actions { display: flex; flex-wrap: wrap; gap: .48rem; margin: .85rem 0 .65rem; }
-#copy-status:not(:empty) { display: block; margin-top: .35rem; overflow-wrap: anywhere; }
-#copy-status a { text-underline-offset: .16em; }
+.brand p { color: var(--muted); font-size: .78rem; }
 
 .control {
   display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
@@ -39,8 +36,6 @@ h1, h2, h3, p, dl, dd, figure { margin: 0; }
   font-size: .84rem; font-weight: 750; text-align: center;
 }
 .control:hover { background: #eee4cc; }
-.control.primary { background: var(--gold); }
-.control.primary:hover { background: #ebc96f; }
 .control:disabled { opacity: .45; cursor: default; }
 
 .explorer { padding: clamp(1rem, 4.2vw, 2.3rem); }
