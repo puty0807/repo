@@ -4,6 +4,13 @@
 
   var storageKey = 'phs-repo-language';
   var translations = {
+    "「−」で畳む。背景を完全に透過しても黄色いNotesは残り、位置固定がOFFならそのまま移動できる。": "Tap “−” to collapse it. The yellow Notes header stays visible even with a fully transparent background and remains draggable when Position Lock is OFF.",
+    "ロック画面の付箋。文字サイズ・位置固定・位置リセット、入力の取り消し・やり直しに対応。": "Lock-screen notes with text sizing, position lock and reset, plus undo and redo.",
+    "本文をタップして編集。キーボード上の「元に戻す／やり直す」で入力中の変更を戻せる。": "Tap the note body to edit. Use Undo and Redo above the keyboard to reverse changes made while typing.",
+    "歯車の「文字サイズ」で12〜24ポイントに調整。「位置を固定」でドラッグによる誤移動を防ぐ。": "Use Text Size in settings to choose 12–24 points. Position Lock prevents accidental dragging.",
+    "「位置を戻す」は位置だけを初期に戻す。本文・背景の濃さ・文字サイズ・折りたたみ状態は維持する。": "Reset Position restores only the initial placement, preserving the text, background opacity, text size, and collapsed state.",
+    "位置の固定がOFFなら、Notesの上の帯をドラッグして移動できる。歯車で背景の透明度も調整できる。": "With Position Lock OFF, drag the Notes header to move the note. Use the gear icon to adjust background opacity.",
+    "iOS 15・Dopamine Rootless向け。最新版は0.1.3。本文・位置・背景の濃さ・文字サイズ・位置固定の設定を端末に保存する。本文はロック解除前の画面にも表示される。新しい操作のiPhone実機動作は未確認。": "For iOS 15 with Dopamine Rootless. Latest: 0.1.3. Text, position, background opacity, text size, and position-lock settings are stored on-device. The text is visible before the phone is unlocked. New controls have not been tested on an iPhone.",
     "CLIPを対応アプリ間で共有。コピーしたパスワードにも対応。KEYバーの配置・移動も改善。": "Share CLIP across supported apps, including copied passwords. Improved KEY toolbar placement and dragging.",
     "複数の画像を固定し、全部隠す／戻す・位置とサイズのリセットができる。スクショ起動処理も改善。": "Pin multiple images, hide or restore them together, and reset their position and size. Improved screenshot activation.",
     "左端の「⋮」を上下にドラッグして移動・位置保存。タップで自動配置へ戻す。": "Drag the ⋮ handle on the left up or down to move and save the toolbar position. Tap it to restore automatic placement.",

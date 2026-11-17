@@ -75,8 +75,8 @@ const featured = [
   },
   {
     slug: 'notes', id: 'jp.puteihirose.locknote', name: 'LockNote',
-    version: '0.1.2', icon: '≡',
-    summary: 'ロック画面に書ける付箋。黄色い見出しごと移動でき、背景の透明度も調整できる。',
+    version: '0.1.3', icon: '≡',
+    summary: 'ロック画面の付箋。文字サイズ・位置固定・位置リセット、入力の取り消し・やり直しに対応。',
     keywords: 'ノーツ ノート メモ ロック画面 付箋'
   }
 ].map((entry) => ({

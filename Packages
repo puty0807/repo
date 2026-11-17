@@ -149,6 +149,24 @@ Name: LockNote
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.locknote.json
 Depiction: https://puty0807.github.io/repo/#notes
 
+Package: jp.puteihirose.locknote
+Version: 0.1.3
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 124
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Filename: ./debs/jp.puteihirose.locknote_0.1.3_iphoneos-arm64.deb
+Size: 18122
+MD5sum: 2917a68355e6e51ff1cd00ca91f9ab44
+SHA1: 7f633d54126ef19f5e8a1e74880f62211f5b2e60
+SHA256: bb8e1da782cb1f39360ebb8702be5a7f76c69a71b891eb437b3dd3f5ba053b91
+Section: Tweaks
+Description: Editable lock-screen notes with position lock, text size controls, placement reset and Undo/Redo on iOS 15.
+Author: Putei Hirose
+Name: LockNote
+SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.locknote.json
+Depiction: https://puty0807.github.io/repo/#notes
+
 Package: jp.puteihirose.pin
 Version: 0.4.0
 Architecture: iphoneos-arm64
