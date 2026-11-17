@@ -4,6 +4,18 @@
 
   var storageKey = 'phs-repo-language';
   var translations = {
+    "CLIPを対応アプリ間で共有。コピーしたパスワードにも対応。KEYバーの配置・移動も改善。": "Share CLIP across supported apps, including copied passwords. Improved KEY toolbar placement and dragging.",
+    "複数の画像を固定し、全部隠す／戻す・位置とサイズのリセットができる。スクショ起動処理も改善。": "Pin multiple images, hide or restore them together, and reset their position and size. Improved screenshot activation.",
+    "左端の「⋮」を上下にドラッグして移動・位置保存。タップで自動配置へ戻す。": "Drag the ⋮ handle on the left up or down to move and save the toolbar position. Tap it to restore automatic placement.",
+    "純正メニューや送信・添付ボタンを避けて自動配置。横向きにも追従し、ドラッグ中断時は元の設定に戻る。": "KEY avoids native menus and send or attachment buttons, follows landscape changes, and restores the previous setting when a drag is interrupted.",
+    "CLIPのテキスト・画像・PINNED・お気に入り・カテゴリーを対応アプリで共有。共通履歴にはlibSandyが必要。": "Share CLIP text, images, pinned items, favorites, and categories across supported apps. Shared history requires libSandy.",
+    "自動保存はアプリごと。メモ・Safari・メッセージ・メールは初期ON、それ以外は初期OFF。コピーしたパスワードも保存対象。ワンタイムコード欄は対象外。": "Autosave is set per app. Notes, Safari, Messages, and Mail default to ON; other apps default to OFF. Copied passwords can also be saved. One-time-code fields are excluded.",
+    "共通履歴の「全部削除」は、他の対応アプリの履歴にも反映される。": "Clearing all shared history also removes it from the other supported apps.",
+    "iOS 15・Dopamine Rootless向け。最新版は0.0.19ベータ。ビルド・自動テストは成功。共通履歴・パスワード保存・配置の実機動作は未確認。旧版0.0.16・0.0.14も配布中。": "For iOS 15 with Dopamine Rootless. Latest: 0.0.19 beta. Builds and automated tests passed. Shared history, password saving, and placement have not been tested on an iPhone. Versions 0.0.16 and 0.0.14 remain available.",
+    "端のピンか画像の「…」から「固定画像を全部隠す／全部戻す」。各画像の位置・大きさ・透明度・折りたたみ状態を保つ。": "Use the edge pin or an image’s “…” menu to hide or restore all pinned images, preserving each image’s position, size, opacity, and collapsed state.",
+    "画像の「…」の「位置・サイズをリセット」で初期配置に戻す。": "Choose “Reset position and size” from an image’s “…” menu to restore its initial placement.",
+    "iOS 15・Dopamine Rootless向け。最新版は0.4.1ベータ。撮影失敗時の復帰、連打・ロック時の取消処理を改善。ビルド・自動テストは成功。スクショ起動・新しい表示操作の実機動作は未確認。": "For iOS 15 with Dopamine Rootless. Latest: 0.4.1 beta. Improved recovery from capture failures and cancellation during repeated presses or locking. Builds and automated tests passed. Screenshot activation and the new display controls have not been tested on an iPhone.",
+    "画像は以前のバージョンの参考表示。最新の機能・設定は上の説明を確認してね。": "Screenshots show an earlier version for reference. See the description above for current features and settings.",
     'リポジトリを追加': 'Add this repository',
     '使っているパッケージマネージャーを選んで、登録画面を開ける。': 'Choose your package manager to open its Add Source screen.',
     'タップして追加': 'Tap to add',

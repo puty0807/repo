@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - 'debs/**'
+      - 'depictions/**'
+      - 'scripts/**'
+      - 'index.html'
+      - 'explorer.js'
+      - 'i18n.js'
       - '.github/workflows/rebuild-packages.yml'
   workflow_dispatch:
 
@@ -47,6 +52,9 @@ jobs:
           } > Release
           grep -q '^Package: jp.puteihirose.locknote$' Packages
           grep -q '^Package: jp.puteihirose.keyboard$' Packages
+
+      - name: Validate release artifacts and page metadata
+        run: python3 scripts/verify-release.py
 
       - name: Commit refreshed index
         run: |

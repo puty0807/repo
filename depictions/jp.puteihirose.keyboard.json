@@ -20,16 +20,24 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "1. 入力欄を開き、キーボード上のP.H.S KEYから編集する。\n2. CLIPから履歴やお気に入りを開く。共通履歴はメモ・Safari・メッセージ・メールが対象。\n3. Spotlight検索の対応は試験中。0.0.14では純正の「テキストをスキャン」が出たときの位置調整を見直した。"
+          "markdown": "1. 入力欄を開き、P.H.S KEYから編集する。送信・添付ボタンや純正編集メニューを避け、空き領域に配置する。\n2. 左端の「⋮」を上下にドラッグしてアプリごとの位置を保存。タップすると自動配置に戻る。横向きの安全領域、画面サイズ、キーボード切り替えへの追従も改善した。\n3. CLIPからテキスト・画像・PINNED・お気に入り・カテゴリーを利用する。共有権限を取得できたKEYBOARD対応アプリは同じ履歴を使い、取得できない場合は個別履歴を使う。"
         },
         {
           "class": "DepictionTableTextView",
           "title": "バージョン",
-          "text": "0.0.14 Beta"
+          "text": "0.0.19 Beta"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "iOS 15・Dopamine Rootless向け。アプリの入力欄によって表示は異なる。Spotlightの0.0.14の変更は実機再確認待ち。"
+          "markdown": "自動保存のON/OFFはアプリごと。初期値はメモ・Safari・メッセージ・メールがON、それ以外はOFFで、設定済みの値は維持する。自動保存ONではコピーしたパスワード・新規パスワードも履歴に残り、共通履歴ONなら他の対応アプリでも使える。入力欄の文字列を直接取得する処理は追加していない。自動保存OFF、バックグラウンド、編集中の入力欄がない場合、ワンタイムコードとして指定された入力欄からは自動保存しない。"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "共有にはlibSandyを使用し、対象は既存の除外対象を除くUIKitアプリ。金融・認証系など既存の対象外アプリは引き続き除外し、SpringBoardはロック解除中のSpotlightだけに限る。履歴は最大25件、うち画像10件。初回共有時に個別履歴を上限内でマージし、元の個別履歴・画像は残す。「履歴をすべて削除」は共通履歴全体に反映される。"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "iOS 15・Dopamine Rootless・arm64e向け。元のTheosプロジェクトからのビルド・パッケージ検証・ホスト上のテストはCIで成功。0.0.19の仕様は確認済みだが、iPhone実機での共有権限・パスワードコピー・アプリ固有の配置や動作は未確認。0.0.15は引き続き配布停止。"
         }
       ]
     },
@@ -37,6 +45,10 @@
       "class": "DepictionStackView",
       "tabname": "スクリーンショット",
       "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "以下は旧版UIのスクリーンショット。0.0.19の共通履歴・パスワード保存・設定表示を撮り直した画像ではない。"
+        },
         {
           "class": "DepictionSubheaderView",
           "title": "P.H.S KEYの編集バー"

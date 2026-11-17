@@ -63,14 +63,14 @@ document.addEventListener('keydown', (event) => {
 const featured = [
   {
     slug: 'keyboard', id: 'jp.puteihirose.keyboard', name: 'P.H.S KEYBOARD',
-    version: '0.0.16', icon: '⌨',
-    summary: 'バーの自動配置を強化。つまみで上下に移動・位置保存・タップで自動復帰。CLIPは0.0.14のまま。',
+    version: '0.0.19', icon: '⌨',
+    summary: 'CLIPを対応アプリ間で共有。コピーしたパスワードにも対応。KEYバーの配置・移動も改善。',
     keywords: 'キーボード コピー CLIP クリップボード 入力 テキスト 履歴'
   },
   {
     slug: 'pin', id: 'jp.puteihirose.pin', name: 'P.H.S PIN',
-    version: '0.4.0', icon: '⌖',
-    summary: 'スクショの必要な範囲だけ切り取り、複数枚を画面に固定できる。',
+    version: '0.4.1', icon: '⌖',
+    summary: '複数の画像を固定し、全部隠す／戻す・位置とサイズのリセットができる。スクショ起動処理も改善。',
     keywords: 'ピン 画像 スクリーンショット OCR QR 範囲 切り抜き'
   },
   {

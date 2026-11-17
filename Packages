@@ -15,6 +15,7 @@ Description: UIKit input toolbar beta: avoids chat composer Send/Plus overlap; r
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
 Version: 0.0.11
@@ -33,6 +34,7 @@ Description: Dynamically repositions P.H.S KEYBOARD on input-method and keyboard
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
 Version: 0.0.12
@@ -51,6 +53,7 @@ Description: Displays P.H.S KEY above the native iOS editing menu, then restores
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
 Version: 0.0.13
@@ -69,6 +72,7 @@ Description: Adds fail-closed Home Spotlight search toolbar support while retain
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
 Version: 0.0.14
@@ -87,6 +91,7 @@ Description: Fixes Spotlight native edit menu overlap by preserving KEY at a saf
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
 Version: 0.0.16
@@ -105,6 +110,26 @@ Description: Adds collision-aware automatic KEY placement and a drag grip with p
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Depiction: https://puty0807.github.io/repo/#keyboard
+
+Package: jp.puteihirose.keyboard
+Version: 0.0.19
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 272
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Recommends: com.opa334.libsandy (>= 1.1.6)
+Filename: ./debs/jp.puteihirose.keyboard_0.0.19_iphoneos-arm64.deb
+Size: 60284
+MD5sum: 9b91ef3e2b5724c925063d65cc8badf2
+SHA1: ba24c6d33b1133dbec2f2b0376a14015eb9fee88
+SHA256: 8486da34b56675d7adf7c31ca2da9f26320ae7e44b283c20d443720506e0d33e
+Section: Tweaks
+Description: Shares CLIP history including copied passwords across eligible apps with per-app capture settings and improved KEY placement.
+Author: Putei Hirose
+Name: P.H.S KEYBOARD (Prototype)
+SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.locknote
 Version: 0.1.2
@@ -122,6 +147,7 @@ Description: An editable sticky note for the iOS 15 Lock Screen.
 Author: Putei Hirose
 Name: LockNote
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.locknote.json
+Depiction: https://puty0807.github.io/repo/#notes
 
 Package: jp.puteihirose.pin
 Version: 0.4.0
@@ -139,4 +165,23 @@ Description: Choose a full or cropped capture from the screenshot buttons on iOS
 Author: Putei Hirose
 Name: P.H.S PIN
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.pin.json
+Depiction: https://puty0807.github.io/repo/#pin
+
+Package: jp.puteihirose.pin
+Version: 0.4.1
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 160
+Depends: firmware (>= 15.0), firmware (<< 16.0)
+Filename: ./debs/jp.puteihirose.pin_0.4.1_iphoneos-arm64.deb
+Size: 31236
+MD5sum: 301d517f4defb403c3b38281ab7e8dab
+SHA1: 789710a92d3b14f397e9a11c8b6d013c7336f235
+SHA256: 5aa2692e74c1991652061f734b0c85de1943a88c8a8a64819cbacb5e2aedadde
+Section: Tweaks
+Description: Improves screenshot capture recovery and adds hide/restore all pins and placement reset on iOS 15.
+Author: Putei Hirose
+Name: P.H.S PIN
+SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.pin.json
+Depiction: https://puty0807.github.io/repo/#pin
 
