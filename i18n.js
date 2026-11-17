@@ -4,15 +4,16 @@
 
   var storageKey = 'phs-repo-language';
   var translations = {
-    "設定項目が見えないとの報告を受け、コントローラの登録と設定画面の読み込み方式を修正。0.1.1での表示・操作は実機確認待ち。": "Following a report of a missing Settings entry, version 0.1.1 corrects controller registration and preference-bundle linking. Settings visibility and operation still need device retesting.",
-    "設定への登録を修正した0.1.1試用版。初期OFF、実機での再表示は確認待ち。": "Preview 0.1.1 corrects Settings registration. Disabled by default; device visibility retesting pending.",
+    "反応しなければ、設定の「実行側の接続を確認」を押す。実行側の未起動、設定OFF、ロック判定、実行範囲、割り当て、ホーム画面の検出状態を確認できる。診断自体は操作を実行しない。": "If gestures do not respond, tap Check Engine Connection in Settings. It checks engine presence, enablement, lock state, scope, assignments and Home-window discovery. The diagnostic does not execute an action.",
+    "0.1.1で設定表示は確認できたものの、操作が無反応との報告を受け、ホーム画面のジェスチャー取り付け処理を見直した。0.1.2での動作は実機確認待ち。": "Following confirmation that Settings appears in 0.1.1 but gestures do not respond, version 0.1.2 revises Home-screen recognizer attachment. Device behavior still needs retesting.",
+    "ホーム画面の検出を見直し、実行側の接続確認を追加した0.1.2試用版。": "Preview 0.1.2 revises Home-screen discovery and adds an engine-readiness check.",
     "ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版": "gesture tap flashlight recording screenshot haptic preview beta",
-    "0.1.1 試用版": "0.1.1 Preview",
-    "Sileoで0.1.1へ更新後、設定アプリを完全に終了して開き直す。設定 → P.H.S GESTUREを確認。初期状態はOFF。PreferenceLoaderが必要。": "Update to 0.1.1 through Sileo, fully close Settings and reopen it, then look for P.H.S GESTURE. It starts OFF and requires PreferenceLoader.",
+    "0.1.2 試用版": "0.1.2 Preview",
+    "Sileoで0.1.2へ更新し、リスプリング後に設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。": "Update to 0.1.2 in Sileo, respring, then open Settings → P.H.S GESTURE. It starts OFF and requires PreferenceLoader.",
     "最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。": "Start by assigning Haptic Feedback to a three-finger tap or top-edge double tap. Enable the tweak, then reopen the target app.",
     "アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。": "Only haptic testing is available inside apps. For flashlight, recording or screenshots, select the unlocked-screen scope and perform the gesture directly on the Home screen.",
     "ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。": "Disabled while locked. You can exclude apps by bundle ID. Conflicts with native three-finger editing and other gestures still need device testing.",
-    "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。設定画面の表示、触覚、ライト、録画の開始・停止・保存、スクリーンショットはiPhone実機未確認。": "Preview for iOS 15 with Dopamine Rootless. Builds and automated tests passed. Settings loading, haptics, flashlight, recording start/stop/save and screenshots have not been verified on an iPhone.",
+    "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。0.1.1の設定表示は実機確認済み。0.1.2の検出処理、触覚・ライト・録画・撮影・保存の動作は実機確認待ち。": "Preview for iOS 15 with Dopamine Rootless. Builds and automated tests passed. Settings visibility was confirmed on-device in 0.1.1. Recognition, haptics, flashlight, recording, screenshots and saving in 0.1.2 still need device testing.",
     "設定画面が開かない場合は有効化せず、SileoからP.H.S GESTUREを削除する。": "If its Settings page will not open, leave it disabled and remove P.H.S GESTURE through Sileo.",
     "実機スクリーンショットは準備中。掲載画像はありません。": "Device screenshots are pending. No screenshots are published yet.",
     "「−」で畳む。背景を完全に透過しても黄色いNotesは残り、位置固定がOFFならそのまま移動できる。": "Tap “−” to collapse it. The yellow Notes header stays visible even with a fully transparent background and remains draggable when Position Lock is OFF.",

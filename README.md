@@ -46,17 +46,17 @@
 - **既存機能：** 複数画像の固定、コピー、共有・保存、OCR/QR、直近12件の履歴、画像保持枠64 MiB、ロック中の非表示、SpringBoard限定の注入を維持する。
 - **検証状態：** 元のTheosプロジェクトからのRootless arm64eビルド・パッケージ検証・ホスト上の状態テストはCIで成功。0.4.1のハードウェアボタン、実際の描画タイミング、全部隠す／戻す、リセットはiPhone実機未確認。0.4.0も戻せるよう残す。
 
-## P.H.S GESTURE 0.1.1（試用版 / 設定登録の修正・初期OFF）
+## P.H.S GESTURE 0.1.2（試用版 / ホーム画面の検出・実行側の診断）
 
-設定項目が見えないとの報告を受け、コントローラの登録と設定画面の読み込み方式を修正。0.1.1での表示・操作は実機確認待ち。 更新後は設定アプリを完全に終了して開き直す。
+0.1.1で設定表示は確認できたものの、操作が無反応との報告を受け、ホーム画面のジェスチャー取り付け処理を見直した。0.1.2での動作は実機確認待ち。 更新後はリスプリングする。設定の「実行側の接続を確認」は操作を実行せず、実行側の起動と設定の読み取り状態を表示する。
 
 3本指タップと上端ダブルタップに触覚・ライト・録画・撮影を割り当てる独立ツイーク。Sileoからインストールし、設定 → P.H.S GESTUREで使う。PreferenceLoaderが必要。まず触覚だけを割り当て、有効にしてアプリを開き直す。
 
 - **利用範囲：** アプリ内は触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、解除中のホーム画面で直接操作した場合だけ実行。外部通知からは実行しない。ロック中は無効。
-- **検証状態：** iOS 15 / Dopamine Rootless / arm64e向け。ソース331d443の[ビルド・ポリシー/設定登録テスト・パッケージ検査](https://github.com/puty0807/P.H.S/actions/runs/44193221391)は成功。設定画面の表示と各アクション・保存・標準ジェスチャーとの競合は実機未確認。設定画面が開かない場合は有効化せず、Sileoから削除する。これは試用版の公開で、実機合格の宣言ではない。
+- **検証状態：** iOS 15 / Dopamine Rootless / arm64e向け。ソース47f321fの[ビルド・ポリシー/設定登録テスト・パッケージ検査](https://github.com/puty0807/P.H.S/actions/runs/44197440953)は成功。設定画面の表示と各アクション・保存・標準ジェスチャーとの競合は実機未確認。設定画面が開かない場合は有効化せず、Sileoから削除する。これは試用版の公開で、実機合格の宣言ではない。
 - **画像：** 実機スクリーンショットは準備中。掲載画像はありません。
 
-**English:** Following a report of a missing Settings entry, version 0.1.1 corrects controller registration and preference-bundle linking. Settings visibility and operation still need device retesting. Fully close and reopen Settings after upgrading. Preview 0.1.1 is available through the repository, disabled by default. Install with Sileo and open Settings → P.H.S GESTURE (requires PreferenceLoader). Start with haptic feedback. Apps support haptic tests only; flashlight, recording and screenshots require unlocked-screen scope and a gesture directly on the Home screen. Builds and automated checks passed; Settings, device actions, saved output and native gesture compatibility remain unverified on an iPhone. If Settings will not open, leave it disabled and uninstall through Sileo. No device screenshots are available yet.
+**English:** Following confirmation that Settings appears in 0.1.1 but gestures do not respond, version 0.1.2 revises Home-screen recognizer attachment. Device behavior still needs retesting. Respring after updating. Use Check Engine Connection for readiness diagnostics; it does not execute an action. Preview 0.1.2 is available through the repository, disabled by default. Install with Sileo and open Settings → P.H.S GESTURE (requires PreferenceLoader). Start with haptic feedback. Apps support haptic tests only; flashlight, recording and screenshots require unlocked-screen scope and a gesture directly on the Home screen. Builds and automated checks passed; Settings, device actions, saved output and native gesture compatibility remain unverified on an iPhone. If Settings will not open, leave it disabled and uninstall through Sileo. No device screenshots are available yet.
 
 ## 公開ページと更新
 

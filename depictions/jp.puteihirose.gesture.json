@@ -12,16 +12,16 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "設定への登録を修正した0.1.1試用版。初期OFF、実機での再表示は確認待ち。"
+          "markdown": "ホーム画面の検出を見直し、実行側の接続確認を追加した0.1.2試用版。"
         },
         {
           "class": "DepictionTableTextView",
           "title": "バージョン",
-          "text": "0.1.1 Preview"
+          "text": "0.1.2 Preview"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "設定項目が見えないとの報告を受け、コントローラの登録と設定画面の読み込み方式を修正。0.1.1での表示・操作は実機確認待ち。"
+          "markdown": "0.1.1で設定表示は確認できたものの、操作が無反応との報告を受け、ホーム画面のジェスチャー取り付け処理を見直した。0.1.2での動作は実機確認待ち。"
         },
         {
           "class": "DepictionSubheaderView",
@@ -29,7 +29,11 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "1. Sileoで0.1.1へ更新後、設定アプリを完全に終了して開き直す。設定 → P.H.S GESTUREを確認。初期状態はOFF。PreferenceLoaderが必要。\n2. 最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。\n3. アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。\n4. ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。"
+          "markdown": "反応しなければ、設定の「実行側の接続を確認」を押す。実行側の未起動、設定OFF、ロック判定、実行範囲、割り当て、ホーム画面の検出状態を確認できる。診断自体は操作を実行しない。"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "1. Sileoで0.1.2へ更新し、リスプリング後に設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。\n2. 最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。\n3. アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。\n4. ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。"
         },
         {
           "class": "DepictionSubheaderView",
@@ -37,7 +41,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。設定画面の表示、触覚、ライト、録画の開始・停止・保存、スクリーンショットはiPhone実機未確認。\n\n設定画面が開かない場合は有効化せず、SileoからP.H.S GESTUREを削除する。"
+          "markdown": "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。0.1.1の設定表示は実機確認済み。0.1.2の検出処理、触覚・ライト・録画・撮影・保存の動作は実機確認待ち。\n\n設定画面が開かない場合は有効化せず、SileoからP.H.S GESTUREを削除する。"
         },
         {
           "class": "DepictionSubheaderView",
