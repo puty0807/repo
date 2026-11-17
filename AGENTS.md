@@ -19,3 +19,5 @@ with https://puty0807.github.io/repo/ updated in the same release.
   on-device installation or package-manager registration only if it was tested
   on an actual iPhone. The owner has authorized publishing the current releases
   and asked that future requested releases include the page update as well.
+
+- The owner wants requested trial/beta releases installable and updatable from this repository too. Keep the current publication version, source/CI provenance, release commit and remaining device checks in the development repository’s main/PROGRESS.md; update existing entries rather than append repetitive logs.

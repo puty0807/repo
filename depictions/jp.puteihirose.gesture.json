@@ -1,0 +1,49 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "詳細",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "P.H.S GESTURE — 試用版"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "3本指タップ・上端ダブルタップに操作を割り当てる試用版。初期OFF、実機検証待ち。"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "バージョン",
+          "text": "0.1.0 Preview"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "使い方"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "1. Sileoでインストール後、設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。\n2. 最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。\n3. アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。\n4. ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "検証状態"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。設定画面の表示、触覚、ライト、録画の開始・停止・保存、スクリーンショットはiPhone実機未確認。\n\n設定画面が開かない場合は有効化せず、SileoからP.H.S GESTUREを削除する。"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "スクリーンショット"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "実機スクリーンショットは準備中。掲載画像はありません。"
+        }
+      ]
+    }
+  ]
+}

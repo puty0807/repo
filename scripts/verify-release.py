@@ -28,8 +28,13 @@ WEB_SLUGS = {
     "jp.puteihirose.keyboard": "keyboard",
     "jp.puteihirose.pin": "pin",
     "jp.puteihirose.locknote": "notes",
+    "jp.puteihirose.gesture": "gesture",
 }
 
+
+# New previews may have no genuine device images yet. Require an explicit
+# matching notice instead of inventing screenshots or relaxing other packages.
+SCREENSHOTS_PENDING = {"jp.puteihirose.gesture": "実機スクリーンショットは準備中。掲載画像はありません。"}
 
 def require(condition, message):
     if not condition:
@@ -209,7 +214,7 @@ def validate(root):
         require(page.ids.get(slug + "-detail", (None,))[0] == "template",
                 "Direct link #" + slug + " has no matching detail template")
         images = page.template_images.get(slug + "-detail", [])
-        require(images, "No screenshots for direct link #" + slug)
+        require(images or name in SCREENSHOTS_PENDING, "No screenshots for direct link #" + slug)
         for image in images:
             local_asset(root, image)
         depiction_url = PAGES + "depictions/" + name + ".json"
@@ -220,7 +225,13 @@ def validate(root):
         require(len(versions) == 1 and re.match(re.escape(version) + r"(?:\s|$)", versions[0]),
                 name + ": native depiction version is stale: " + repr(versions))
         screenshot_urls = [image["url"] for node in nodes for image in node.get("screenshots", [])]
-        require(screenshot_urls, name + ": native depiction has no screenshots")
+        require(screenshot_urls or name in SCREENSHOTS_PENDING, name + ": native depiction has no screenshots")
+        if not images or not screenshot_urls:
+            notice = SCREENSHOTS_PENDING.get(name)
+            require(notice and notice in (root / "index.html").read_text(encoding="utf-8"),
+                    name + ": missing web screenshot-pending notice")
+            require(any(notice in node.get("markdown", "") for node in nodes),
+                    name + ": missing native screenshot-pending notice")
         for image in screenshot_urls:
             local_asset(root, image)
         require({local_asset(root, image) for image in images}

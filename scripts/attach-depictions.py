@@ -8,6 +8,7 @@ slugs = {
     "jp.puteihirose.keyboard": "keyboard",
     "jp.puteihirose.pin": "pin",
     "jp.puteihirose.locknote": "notes",
+    "jp.puteihirose.gesture": "gesture",
 }
 entries = []
 for stanza in index.read_text(encoding="utf-8").strip().split("\n\n"):

@@ -74,6 +74,12 @@ const featured = [
     keywords: 'ピン 画像 スクリーンショット OCR QR 範囲 切り抜き'
   },
   {
+    slug: 'gesture', id: 'jp.puteihirose.gesture', name: 'P.H.S GESTURE',
+    version: '0.1.0', icon: '✦',
+    summary: '3本指タップ・上端ダブルタップに操作を割り当てる試用版。初期OFF、実機検証待ち。',
+    keywords: 'ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版'
+  },
+  {
     slug: 'notes', id: 'jp.puteihirose.locknote', name: 'LockNote',
     version: '0.1.3', icon: '≡',
     summary: 'ロック画面の付箋。文字サイズ・位置固定・位置リセット、入力の取り消し・やり直しに対応。',
@@ -340,7 +346,7 @@ async function loadIndex() {
     renderCards();
     showRequestedPackage();
   } catch {
-    // The three featured packages are available even if the index cannot load.
+    // Featured packages are available even if the index cannot load.
   }
 }
 

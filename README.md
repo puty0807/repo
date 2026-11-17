@@ -10,6 +10,7 @@
 
 - [Keyboardのスクリーンショット](https://puty0807.github.io/repo/#keyboard)
 - [PINの使い方とスクリーンショット](https://puty0807.github.io/repo/#pin)
+- [GESTUREの使い方・試用版の検証状態](https://puty0807.github.io/repo/#gesture)
 - [LockNoteのスクリーンショット](https://puty0807.github.io/repo/#notes)
 - [Ｐ.Ｈ.Ｓ 公式サイト](https://puteihirose.com/)
 
@@ -44,6 +45,16 @@
 - **リセット：** 画像の「…」から位置・サイズを初期状態へ戻せる。画像の内容・透明度・折りたたみ状態は保つ。
 - **既存機能：** 複数画像の固定、コピー、共有・保存、OCR/QR、直近12件の履歴、画像保持枠64 MiB、ロック中の非表示、SpringBoard限定の注入を維持する。
 - **検証状態：** 元のTheosプロジェクトからのRootless arm64eビルド・パッケージ検証・ホスト上の状態テストはCIで成功。0.4.1のハードウェアボタン、実際の描画タイミング、全部隠す／戻す、リセットはiPhone実機未確認。0.4.0も戻せるよう残す。
+
+## P.H.S GESTURE 0.1.0（試用版 / 初期OFF）
+
+3本指タップと上端ダブルタップに触覚・ライト・録画・撮影を割り当てる独立ツイーク。Sileoからインストールし、設定 → P.H.S GESTUREで使う。PreferenceLoaderが必要。まず触覚だけを割り当て、有効にしてアプリを開き直す。
+
+- **利用範囲：** アプリ内は触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、解除中のホーム画面で直接操作した場合だけ実行。外部通知からは実行しない。ロック中は無効。
+- **検証状態：** iOS 15 / Dopamine Rootless / arm64e向け。ソース9c9f7f7の[ビルド・ポリシーテスト・パッケージ検査](https://github.com/puty0807/P.H.S/actions/runs/44181379971)は成功。設定画面の表示と各アクション・保存・標準ジェスチャーとの競合は実機未確認。設定画面が開かない場合は有効化せず、Sileoから削除する。これは試用版の公開で、実機合格の宣言ではない。
+- **画像：** 実機スクリーンショットは準備中。掲載画像はありません。
+
+**English:** Preview 0.1.0 is available through the repository, disabled by default. Install with Sileo and open Settings → P.H.S GESTURE (requires PreferenceLoader). Start with haptic feedback. Apps support haptic tests only; flashlight, recording and screenshots require unlocked-screen scope and a gesture directly on the Home screen. Builds and automated checks passed; Settings, device actions, saved output and native gesture compatibility remain unverified on an iPhone. If Settings will not open, leave it disabled and uninstall through Sileo. No device screenshots are available yet.
 
 ## 公開ページと更新
 

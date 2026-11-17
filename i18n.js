@@ -4,6 +4,16 @@
 
   var storageKey = 'phs-repo-language';
   var translations = {
+    "3本指タップ・上端ダブルタップに操作を割り当てる試用版。初期OFF、実機検証待ち。": "Preview gesture assignments for three-finger taps and top-edge double taps. Disabled by default; iPhone testing pending.",
+    "ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版": "gesture tap flashlight recording screenshot haptic preview beta",
+    "0.1.0 試用版": "0.1.0 Preview",
+    "Sileoでインストール後、設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。": "Install through Sileo, then open Settings → P.H.S GESTURE. It starts OFF and requires PreferenceLoader.",
+    "最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。": "Start by assigning Haptic Feedback to a three-finger tap or top-edge double tap. Enable the tweak, then reopen the target app.",
+    "アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。": "Only haptic testing is available inside apps. For flashlight, recording or screenshots, select the unlocked-screen scope and perform the gesture directly on the Home screen.",
+    "ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。": "Disabled while locked. You can exclude apps by bundle ID. Conflicts with native three-finger editing and other gestures still need device testing.",
+    "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。設定画面の表示、触覚、ライト、録画の開始・停止・保存、スクリーンショットはiPhone実機未確認。": "Preview for iOS 15 with Dopamine Rootless. Builds and automated tests passed. Settings loading, haptics, flashlight, recording start/stop/save and screenshots have not been verified on an iPhone.",
+    "設定画面が開かない場合は有効化せず、SileoからP.H.S GESTUREを削除する。": "If its Settings page will not open, leave it disabled and remove P.H.S GESTURE through Sileo.",
+    "実機スクリーンショットは準備中。掲載画像はありません。": "Device screenshots are pending. No screenshots are published yet.",
     "「−」で畳む。背景を完全に透過しても黄色いNotesは残り、位置固定がOFFならそのまま移動できる。": "Tap “−” to collapse it. The yellow Notes header stays visible even with a fully transparent background and remains draggable when Position Lock is OFF.",
     "ロック画面の付箋。文字サイズ・位置固定・位置リセット、入力の取り消し・やり直しに対応。": "Lock-screen notes with text sizing, position lock and reset, plus undo and redo.",
     "本文をタップして編集。キーボード上の「元に戻す／やり直す」で入力中の変更を戻せる。": "Tap the note body to edit. Use Undo and Redo above the keyboard to reverse changes made while typing.",
