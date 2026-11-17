@@ -4,10 +4,11 @@
 
   var storageKey = 'phs-repo-language';
   var translations = {
-    "3本指タップ・上端ダブルタップに操作を割り当てる試用版。初期OFF、実機検証待ち。": "Preview gesture assignments for three-finger taps and top-edge double taps. Disabled by default; iPhone testing pending.",
+    "設定項目が見えないとの報告を受け、コントローラの登録と設定画面の読み込み方式を修正。0.1.1での表示・操作は実機確認待ち。": "Following a report of a missing Settings entry, version 0.1.1 corrects controller registration and preference-bundle linking. Settings visibility and operation still need device retesting.",
+    "設定への登録を修正した0.1.1試用版。初期OFF、実機での再表示は確認待ち。": "Preview 0.1.1 corrects Settings registration. Disabled by default; device visibility retesting pending.",
     "ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版": "gesture tap flashlight recording screenshot haptic preview beta",
-    "0.1.0 試用版": "0.1.0 Preview",
-    "Sileoでインストール後、設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。": "Install through Sileo, then open Settings → P.H.S GESTURE. It starts OFF and requires PreferenceLoader.",
+    "0.1.1 試用版": "0.1.1 Preview",
+    "Sileoで0.1.1へ更新後、設定アプリを完全に終了して開き直す。設定 → P.H.S GESTUREを確認。初期状態はOFF。PreferenceLoaderが必要。": "Update to 0.1.1 through Sileo, fully close Settings and reopen it, then look for P.H.S GESTURE. It starts OFF and requires PreferenceLoader.",
     "最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。": "Start by assigning Haptic Feedback to a three-finger tap or top-edge double tap. Enable the tweak, then reopen the target app.",
     "アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。": "Only haptic testing is available inside apps. For flashlight, recording or screenshots, select the unlocked-screen scope and perform the gesture directly on the Home screen.",
     "ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。": "Disabled while locked. You can exclude apps by bundle ID. Conflicts with native three-finger editing and other gestures still need device testing.",

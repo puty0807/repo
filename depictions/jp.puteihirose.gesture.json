@@ -12,12 +12,16 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "3本指タップ・上端ダブルタップに操作を割り当てる試用版。初期OFF、実機検証待ち。"
+          "markdown": "設定への登録を修正した0.1.1試用版。初期OFF、実機での再表示は確認待ち。"
         },
         {
           "class": "DepictionTableTextView",
           "title": "バージョン",
-          "text": "0.1.0 Preview"
+          "text": "0.1.1 Preview"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "設定項目が見えないとの報告を受け、コントローラの登録と設定画面の読み込み方式を修正。0.1.1での表示・操作は実機確認待ち。"
         },
         {
           "class": "DepictionSubheaderView",
@@ -25,7 +29,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "1. Sileoでインストール後、設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。\n2. 最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。\n3. アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。\n4. ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。"
+          "markdown": "1. Sileoで0.1.1へ更新後、設定アプリを完全に終了して開き直す。設定 → P.H.S GESTUREを確認。初期状態はOFF。PreferenceLoaderが必要。\n2. 最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。\n3. アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。\n4. ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。"
         },
         {
           "class": "DepictionSubheaderView",

@@ -75,8 +75,8 @@ const featured = [
   },
   {
     slug: 'gesture', id: 'jp.puteihirose.gesture', name: 'P.H.S GESTURE',
-    version: '0.1.0', icon: '✦',
-    summary: '3本指タップ・上端ダブルタップに操作を割り当てる試用版。初期OFF、実機検証待ち。',
+    version: '0.1.1', icon: '✦',
+    summary: '設定への登録を修正した0.1.1試用版。初期OFF、実機での再表示は確認待ち。',
     keywords: 'ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版'
   },
   {
