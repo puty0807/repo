@@ -75,8 +75,8 @@ const featured = [
   },
   {
     slug: 'gesture', id: 'jp.puteihirose.gesture', name: 'P.H.S GESTURE',
-    version: '0.1.2', icon: '✦',
-    summary: 'ホーム画面の検出を見直し、実行側の接続確認を追加した0.1.2試用版。',
+    version: '0.1.3', icon: '✦',
+    summary: 'Ready後も無反応な場合の受信・認識・実行件数を表示する0.1.3試用版。',
     keywords: 'ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版'
   },
   {
