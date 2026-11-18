@@ -48,14 +48,14 @@
 
 ## P.H.S GESTURE 0.1.4（試用版 / スクショ経路と標準バイブレーション）
 
-ユーザーが3本指の認識・アクション呼び出しとライト点灯を確認。0.1.3ではスクショ割当と単独触覚に出力がなかったため、0.1.4で撮影の要求経路を見直し、触覚を標準バイブレーションAPIへ変更した。ライトの処理とロック/範囲/実行元の制限は維持する。
+ユーザーが3本指の認識・アクション呼び出し、ライト点灯、スクショ撮影成功を確認。0.1.4配布後にスクショ成功の報告があった。0.1.3ではスクショ割当と単独触覚に出力がなかったため、0.1.4で撮影の要求経路を見直し、触覚を標準バイブレーションAPIへ変更した。ライトの処理とロック/範囲/実行元の制限は維持する。
 
 - **使い方：** Sileoで0.1.4へ更新→リスプリング。ホームで割当ジェスチャーを試し、反応がなければ設定の「実行側の接続を確認」に出る撮影経路・結果を確認する。「触覚だけをテスト」は認識とは別に振動を要求する。初期OFF、PreferenceLoaderが必要。
 - **要求と結果：** SpringBoardの撮影要求、screenshotManager、legacyの順に存在とABIを検査する。要求送信または例外のあとには重複撮影を避けて再試行しない。「要求済み」は保存成功の証明ではない。録画・撮影の写真保存と触覚の体感は実機で別に確認する。
 - **範囲・診断：** アプリ内は触覚テストのみ。ライト/録画/撮影は解除中の既知Home窓で直接認識した操作だけ。段階件数・停止理由・撮影/触覚経路を端末内で表示する。座標・入力内容・画像・イベント履歴を保存せず、件数と状態のsnapshotは診断時だけ保存。未認証の診断は権限判定に使わない。
-- **検証：** ソースa000d52の[CI](https://github.com/puty0807/P.H.S/actions/runs/44231055052)でnative/manager/legacyの順序、ABI不一致・未検出・例外時の安全な中断と重複なし、既存の権限/ホスト/診断テスト、iOS15 arm64eビルドとパッケージ検査は成功。0.1.4の実機での撮影・振動・保存は未確認。旧版は戻せるよう保持する。
+- **検証：** ソースa000d52の[CI](https://github.com/puty0807/P.H.S/actions/runs/44231055052)でnative/manager/legacyの順序、ABI不一致・未検出・例外時の安全な中断と重複なし、既存の権限/ホスト/診断テスト、iOS15 arm64eビルドとパッケージ検査は成功。スクショ撮影はユーザー確認済み。体感振動、録画開始・停止・保存、上端ダブルタップは実機未確認。端末の導入版番号と写真保存は個別申告なし。旧版は戻せるよう保持する。
 
-**English:** The user confirmed three-finger recognition/dispatch and working flashlight output. Preview 0.1.4 updates screenshot routing with runtime ABI validation and replaces undocumented haptic IDs with standard vibration. Update via Sileo and respring. Screenshot Route in diagnostics distinguishes dispatched requests, missing APIs, incompatible signatures and exceptions; dispatch does not prove a saved photo. Test Haptic Only is independent of recognition. Initial state is OFF and PreferenceLoader is required. Device screenshot/vibration/save verification remains pending. Existing permission gates and privacy boundaries are retained; earlier versions remain available.
+**English:** The user confirmed three-finger recognition/dispatch, working flashlight output and screenshot capture after the 0.1.4 release. Preview 0.1.4 updates screenshot routing with runtime ABI validation and replaces undocumented haptic IDs with standard vibration. Update via Sileo and respring. Screenshot Route in diagnostics distinguishes dispatched requests, missing APIs, incompatible signatures and exceptions; dispatch does not prove a saved photo. Test Haptic Only is independent of recognition. Initial state is OFF and PreferenceLoader is required. Felt vibration, recording start/stop/save, top-edge double taps, the installed version number and a separate Photos-save check remain unconfirmed. Existing permission gates and privacy boundaries are retained; earlier versions remain available.
 
 ## 公開ページと更新
 
