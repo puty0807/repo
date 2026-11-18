@@ -46,18 +46,17 @@
 - **既存機能：** 複数画像の固定、コピー、共有・保存、OCR/QR、直近12件の履歴、画像保持枠64 MiB、ロック中の非表示、SpringBoard限定の注入を維持する。
 - **検証状態：** 元のTheosプロジェクトからのRootless arm64eビルド・パッケージ検証・ホスト上の状態テストはCIで成功。0.4.1のハードウェアボタン、実際の描画タイミング、全部隠す／戻す、リセットはiPhone実機未確認。0.4.0も戻せるよう残す。
 
-## P.H.S GESTURE 0.1.6（試用版 / ステータスバー入力の修正）
+## P.H.S GESTURE 0.1.7（試用版 / ステータスバー入力窓の固定）
 
-0.1.5では3本指からの録画開始・停止・保存をユーザー確認済み。一方、ステータスバー操作は反応しないと報告された。0.1.6は上端タッチの受信先と認識方法を見直し、ホーム表示中かを確認して実行する。3本指と、録画・スクショ・ライトの出力処理を維持する。
+0.1.6の実機画像は上端入力143・2回目候補46でも認識/実行0。0.1.7は実機で受信を確認できた専用ステータスバー窓だけで認識し、別窓の入力で状態を消さないよう修正。画像だけでは取消の唯一の原因を確定できないため、個別の取消理由も表示する。
 
-- **使い方：** Sileoで0.1.6へ更新→リスプリング。有効化ON、範囲を「ロック解除中の全画面」にし、上端ダブルタップへライトを割り当てる。ホームの時計側などを軽く2回タップして点灯/消灯を試す。初期OFF、PreferenceLoaderが必要。
-- **上端の条件：** 実際のステータスバー領域で1本指の2回目タップを離したときに判定。ドラッグ・長押し・多指・領域や設定の変更で取り消す。アプリ/通知/CC表示中、ロック中、Home状態が不明な場合は実行しない。標準タップやスワイプを取消・置換しない。
-- **診断：** 「実行側の接続を確認」に「上端入力」「2回目候補」「上端判定」「上端受信窓」を追加。反応がなければこの項目と2タップ認識を確認する。件数や録画APIの応答は物理出力・写真保存の証明ではない。
-- **範囲とデータ：** 機器/撮影操作はHomeの実行条件と有効化/解除/範囲/除外/実行元の検査を維持する。新しい入力窓を全画面実行の許可にしない。アプリ内は触覚テストのみ。認識中の座標・指の参照・時刻は一時的に扱い、診断へ保存しない。入力内容・画像・イベント履歴も記録しない。
-- **録画：** 未完了要求の重複、型不一致、不明な状態、遅延応答への対処を維持。15秒応答がなくても自動再送しない。停止できない場合は標準の録画表示/CCから停止する。0.1.5の初回拒否後に成功した経過と、リスプリング直後の再現性は継続検証。
-- **検証：** ソース686ec17の[CI](https://github.com/puty0807/P.H.S/actions/runs/44292064931)で上端タップの完了/取消/移動/長押し/多指/領域変更とHome/app/通知/CC・型不一致・未検出・例外、既存の録画/撮影/権限/ホスト/trace、iOS15 arm64eビルドとパッケージ検査が成功。0.1.6の上端認識と各操作の回帰は実機未確認。旧版をすべて保持する。
+- **使い方：** Sileoで0.1.7へ更新→リスプリング。有効化ON、範囲「ロック解除中の全画面」、上端2tapへライトを割当。ホームの時計側などを軽く2回タップして点灯/消灯を試す。初期OFF、PreferenceLoaderが必要。
+- **入力の扱い：** 認識中の別窓入力は無視し、タップの完了を待つ。短い1本指2回目タップ・0.35秒/12ptの条件、ホーム/解除/範囲/除外/実行元、前面アプリなし・通知/CC非表示の確認を維持する。iOSの取消では実行しない。標準イベントを取消・置換しない。
+- **診断：** 「上端判定」に別タッチ/指の数/回数/時刻/時間超過/領域外/移動/領域変更/iOS取消などを個別表示。「上端入力」「2回目候補」「上端受信窓」「認識中の別窓入力」も確認できる。件数や録画APIの応答だけで成功を判断しない。
+- **維持する機能：** 3本指、録画・スクショ・ライトの出力処理と権限検査は維持。アプリ内は触覚テストのみ。認識中の座標・指の参照・時刻は診断へ保存せず、入力内容・画像・イベント履歴も記録しない。録画は未完了要求や遅延応答で自動再送しない。
+- **検証：** ソース36641a4の[CI](https://github.com/puty0807/P.H.S/actions/runs/44295715274)で窓の正順/逆順・別窓・重複・取消原因の回帰、既存の上端/ホーム/通知/CC/録画/撮影/権限/ホスト/trace、iOS15 arm64eビルドとパッケージ検査が成功。0.1.7の上端認識・回帰は実機未確認。0.1.5の録画開始/停止/保存の成功報告は保持。初回録画拒否の原因・再現性は別途検証する。旧版もすべて保持する。
 
-**English:** The user confirmed gesture recording start, stop and saving in 0.1.5, but status-bar actions did not respond. Preview 0.1.6 repairs top-touch recognition and requires visible Home, no foreground app/cover/Control Center and the existing permission gates. A completed short stationary single-finger second tap is required. Standard events are neither canceled nor replaced. Top Input, Second-Tap Candidate, Top Gate and Top Host are available through Check Engine Connection. Update via Sileo and respring; test flashlight near the Home-screen clock. Recording/screenshot/flashlight implementations remain unchanged. Version 0.1.6 device recognition and regression remain unverified; initial recording rejection and first-use reliability remain unresolved. All rollback packages are retained.
+**English:** Version 0.1.6 received top input and second-tap candidates but canceled before recognition. Preview 0.1.7 uses the dedicated status-bar window, prevents foreign delivery from replacing/canceling that owner, preserves an eligible Home reference and exposes individual cancellation causes. The 0.35-second/12-point limits and Home/unlock/scope/exclusion/origin/cover/Control Center gates remain. Native cancellation never executes an action. Three-finger/recording/screenshot/flashlight implementations remain unchanged. Update and respring, then test flashlight near the Home-screen clock. Device recognition and regression on 0.1.7 remain pending; the initial recording rejection remains unexplained. All rollback packages are retained.
 
 ## 公開ページと更新
 
