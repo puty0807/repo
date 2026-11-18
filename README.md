@@ -46,16 +46,16 @@
 - **既存機能：** 複数画像の固定、コピー、共有・保存、OCR/QR、直近12件の履歴、画像保持枠64 MiB、ロック中の非表示、SpringBoard限定の注入を維持する。
 - **検証状態：** 元のTheosプロジェクトからのRootless arm64eビルド・パッケージ検証・ホスト上の状態テストはCIで成功。0.4.1のハードウェアボタン、実際の描画タイミング、全部隠す／戻す、リセットはiPhone実機未確認。0.4.0も戻せるよう残す。
 
-## P.H.S GESTURE 0.1.3（試用版 / 入力・認識・実行の段階診断）
+## P.H.S GESTURE 0.1.4（試用版 / スクショ経路と標準バイブレーション）
 
-0.1.2は設定表示とReady応答をユーザーが確認したが、ホームでの3本指触覚は無反応。0.1.3は受信・認識・実行要求・アクション/触覚呼び出しを別々に数え、最後の停止理由・ウィンドウ種別と共に診断へ表示する。呼び出し数は物理的な動作成功の証明ではない。
+ユーザーが3本指の認識・アクション呼び出しとライト点灯を確認。0.1.3ではスクショ割当と単独触覚に出力がなかったため、0.1.4で撮影の要求経路を見直し、触覚を標準バイブレーションAPIへ変更した。ライトの処理とロック/範囲/実行元の制限は維持する。
 
-- **試し方：** Sileoで0.1.3へ更新→リスプリング→有効化ON・「ロック解除中の全画面」で触覚を割当→ホームで3本指タップ→設定の「実行側の接続を確認」で件数を読む。必要なら「触覚だけをテスト」で認識とは別に触覚を試せる。初期OFF・PreferenceLoaderが必要。
-- **範囲と権限：** アプリ内は触覚テストのみ。ライト・録画・撮影は既知のホーム画面で直接認識したジェスチャーだけ。ロック・有効化・範囲・除外・実行元の制限は維持する。低レベルHIDは変更せず、UIKitのイベントはそのまま元の処理へ渡す。
-- **診断データ：** 座標・入力内容・画像・イベント履歴を保存しない。件数と最後のウィンドウ種別をメモリに保持し、診断要求時だけ専用の端末内設定へ保存。request UUIDで古い応答を除外するが、未認証の参考情報であり操作の権限には使わない。
-- **検証状態：** ソース06a6271の[CI](https://github.com/puty0807/P.H.S/actions/runs/44217432587)でiOS15 arm64eビルド、権限256通り・ホスト64通り・段階カウンターのテスト、パッケージ検査は成功。0.1.3の実機動作、録画・撮影・保存と標準ジェスチャー競合は未確認。以前の版も保持する。実機スクリーンショットは準備中。
+- **使い方：** Sileoで0.1.4へ更新→リスプリング。ホームで割当ジェスチャーを試し、反応がなければ設定の「実行側の接続を確認」に出る撮影経路・結果を確認する。「触覚だけをテスト」は認識とは別に振動を要求する。初期OFF、PreferenceLoaderが必要。
+- **要求と結果：** SpringBoardの撮影要求、screenshotManager、legacyの順に存在とABIを検査する。要求送信または例外のあとには重複撮影を避けて再試行しない。「要求済み」は保存成功の証明ではない。録画・撮影の写真保存と触覚の体感は実機で別に確認する。
+- **範囲・診断：** アプリ内は触覚テストのみ。ライト/録画/撮影は解除中の既知Home窓で直接認識した操作だけ。段階件数・停止理由・撮影/触覚経路を端末内で表示する。座標・入力内容・画像・イベント履歴を保存せず、件数と状態のsnapshotは診断時だけ保存。未認証の診断は権限判定に使わない。
+- **検証：** ソースa000d52の[CI](https://github.com/puty0807/P.H.S/actions/runs/44231055052)でnative/manager/legacyの順序、ABI不一致・未検出・例外時の安全な中断と重複なし、既存の権限/ホスト/診断テスト、iOS15 arm64eビルドとパッケージ検査は成功。0.1.4の実機での撮影・振動・保存は未確認。旧版は戻せるよう保持する。
 
-**English:** Preview 0.1.3 adds separate touch receipt, recognizer, dispatch, action and haptic counters after Ready was reported without a felt Home haptic in 0.1.2. Update through Sileo and respring, then tap with three fingers on Home and use Check Engine Connection. Test Haptic Only is a separate gated preview; neither API call counts nor Ready prove physical success. No touch coordinates, input text, images or event history are stored. Counters and the last window type are saved locally only on a diagnostic request. Initial state is OFF; PreferenceLoader is required. Device testing remains pending; no substitute screenshots are published.
+**English:** The user confirmed three-finger recognition/dispatch and working flashlight output. Preview 0.1.4 updates screenshot routing with runtime ABI validation and replaces undocumented haptic IDs with standard vibration. Update via Sileo and respring. Screenshot Route in diagnostics distinguishes dispatched requests, missing APIs, incompatible signatures and exceptions; dispatch does not prove a saved photo. Test Haptic Only is independent of recognition. Initial state is OFF and PreferenceLoader is required. Device screenshot/vibration/save verification remains pending. Existing permission gates and privacy boundaries are retained; earlier versions remain available.
 
 ## 公開ページと更新
 

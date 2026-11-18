@@ -12,20 +12,24 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Ready後も無反応な場合の受信・認識・実行件数を表示する0.1.3試用版。"
+          "markdown": "スクショの要求経路と触覚APIを見直した0.1.4試用版。ライト点灯は確認済み。"
         },
         {
           "class": "DepictionTableTextView",
           "title": "バージョン",
-          "text": "0.1.3 Preview"
+          "text": "0.1.4 Preview"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "0.1.2で接続確認は通るが3本指の触覚が出ないとの報告。0.1.3ではタップの受信・認識・呼び出しと停止理由を切り分ける。"
+          "markdown": "3本指の認識・実行とライト点灯はユーザー確認済み。0.1.4はスクショの要求経路と触覚出力を見直し、診断へ要求先と結果を追加。撮影・触覚は実機確認待ち。"
         },
         {
           "class": "DepictionSubheaderView",
           "title": "使い方"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "診断の「撮影経路」で要求先・型の不一致・API未検出・例外を確認できる。「要求済み」は写真の保存成功を示す表示ではない。"
         },
         {
           "class": "DepictionMarkdownView",
@@ -37,7 +41,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "1. Sileoで0.1.3へ更新し、リスプリング後に設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。\n2. 最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。\n3. アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。\n4. ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。"
+          "markdown": "1. Sileoで0.1.4へ更新し、リスプリング後に設定 → P.H.S GESTUREを開く。初期状態はOFF。PreferenceLoaderが必要。\n2. 最初は3本指タップか上端ダブルタップに「触覚フィードバック」を割り当て、有効にして対応アプリを開き直す。\n3. アプリ内で使えるのは触覚テストのみ。ライト・録画・撮影は「ロック解除中の全画面」を選び、ホーム画面で直接操作した場合だけ実行する。\n4. ロック中は無効。除外するアプリIDを設定できる。標準の3本指編集や他のジェスチャーとの競合は実機確認待ち。"
         },
         {
           "class": "DepictionSubheaderView",
@@ -45,7 +49,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。設定表示と0.1.2のReady応答はユーザー確認済み。0.1.3の件数診断・触覚単独テスト・各操作は実機確認待ち。\n\n設定画面が開かない場合は有効化せず、SileoからP.H.S GESTUREを削除する。"
+          "markdown": "iOS 15・Dopamine Rootless向けの試用版。ビルド・自動テストは成功。設定・認識・ライトはユーザー確認済み。0.1.4の撮影と触覚、録画・保存は実機確認待ち。\n\n設定画面が開かない場合は有効化せず、SileoからP.H.S GESTUREを削除する。"
         },
         {
           "class": "DepictionSubheaderView",

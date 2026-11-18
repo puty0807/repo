@@ -70,6 +70,24 @@ Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
 Depiction: https://puty0807.github.io/repo/#gesture
 
+Package: jp.puteihirose.gesture
+Version: 0.1.4
+Architecture: iphoneos-arm64
+Maintainer: Putei Hirose
+Installed-Size: 184
+Depends: firmware (>= 15.0), firmware (<< 16.0), preferenceloader
+Filename: ./debs/jp.puteihirose.gesture_0.1.4_iphoneos-arm64.deb
+Size: 23172
+MD5sum: 20cd680af5dfe8fb1517b7326ef8e4fe
+SHA1: 4557607de2ce863369bb0dec78784c02927f589d
+SHA256: eaab5702c95db5e4251af384ca8a9a52118c9aa6f3cbbdbca698bcaba27bbf21
+Section: Tweaks
+Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootless. Experimental, disabled by default.
+Author: Putei Hirose
+Name: P.H.S GESTURE (Research Preview)
+SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Depiction: https://puty0807.github.io/repo/#gesture
+
 Package: jp.puteihirose.keyboard
 Version: 0.0.10
 Architecture: iphoneos-arm64
