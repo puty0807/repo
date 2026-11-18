@@ -75,8 +75,8 @@ const featured = [
   },
   {
     slug: 'gesture', id: 'jp.puteihirose.gesture', name: 'P.H.S GESTURE',
-    version: '0.1.7', icon: '✦',
-    summary: '0.1.7試用版。上端認識の窓を固定し、別窓入力での取消を修正。実機検証待ち。',
+    version: '0.1.8', icon: '✦',
+    summary: '0.1.8診断版。上端のライト・スクショは0.1.7で成功。録画の拒否理由を詳しく表示。',
     keywords: 'ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版'
   },
   {

@@ -46,17 +46,17 @@
 - **既存機能：** 複数画像の固定、コピー、共有・保存、OCR/QR、直近12件の履歴、画像保持枠64 MiB、ロック中の非表示、SpringBoard限定の注入を維持する。
 - **検証状態：** 元のTheosプロジェクトからのRootless arm64eビルド・パッケージ検証・ホスト上の状態テストはCIで成功。0.4.1のハードウェアボタン、実際の描画タイミング、全部隠す／戻す、リセットはiPhone実機未確認。0.4.0も戻せるよう残す。
 
-## P.H.S GESTURE 0.1.7（試用版 / ステータスバー入力窓の固定）
+## P.H.S GESTURE 0.1.8（試用版 / 録画診断）
 
-0.1.6の実機画像は上端入力143・2回目候補46でも認識/実行0。0.1.7は実機で受信を確認できた専用ステータスバー窓だけで認識し、別窓の入力で状態を消さないよう修正。画像だけでは取消の唯一の原因を確定できないため、個別の取消理由も表示する。
+0.1.7の上端ダブルタップからライトとスクショ撮影が成功したとユーザー確認。録画のエラー拒否が残るため、0.1.8は開始/停止・要求前の状態・呼出し経路・NSError domain/codeを表示する診断版。録画修正済みとは扱わない。0.1.5での録画開始/停止/写真保存成功は同版の証拠として保持する。
 
-- **使い方：** Sileoで0.1.7へ更新→リスプリング。有効化ON、範囲「ロック解除中の全画面」、上端2tapへライトを割当。ホームの時計側などを軽く2回タップして点灯/消灯を試す。初期OFF、PreferenceLoaderが必要。
-- **入力の扱い：** 認識中の別窓入力は無視し、タップの完了を待つ。短い1本指2回目タップ・0.35秒/12ptの条件、ホーム/解除/範囲/除外/実行元、前面アプリなし・通知/CC非表示の確認を維持する。iOSの取消では実行しない。標準イベントを取消・置換しない。
-- **診断：** 「上端判定」に別タッチ/指の数/回数/時刻/時間超過/領域外/移動/領域変更/iOS取消などを個別表示。「上端入力」「2回目候補」「上端受信窓」「認識中の別窓入力」も確認できる。件数や録画APIの応答だけで成功を判断しない。
-- **維持する機能：** 3本指、録画・スクショ・ライトの出力処理と権限検査は維持。アプリ内は触覚テストのみ。認識中の座標・指の参照・時刻は診断へ保存せず、入力内容・画像・イベント履歴も記録しない。録画は未完了要求や遅延応答で自動再送しない。
-- **検証：** ソース36641a4の[CI](https://github.com/puty0807/P.H.S/actions/runs/44295715274)で窓の正順/逆順・別窓・重複・取消原因の回帰、既存の上端/ホーム/通知/CC/録画/撮影/権限/ホスト/trace、iOS15 arm64eビルドとパッケージ検査が成功。0.1.7の上端認識・回帰は実機未確認。0.1.5の録画開始/停止/保存の成功報告は保持。初回録画拒否の原因・再現性は別途検証する。旧版もすべて保持する。
+- **使い方：** Sileo更新→リスプリング。有効化ON、範囲「ロック解除中の全画面」で録画を割り当て、ホームで一度試す。設定の「録画の診断を確認」で結果を見る。このボタンは録画や触覚を実行しない。初期OFF、PreferenceLoaderが必要。
+- **出力の確認：** 録画表示・停止・写真アプリでの再生を個別に確認。止まらない場合は標準操作で停止する。API応答や件数だけでは成功としない。
+- **維持する処理：** 0.1.7の入力窓固定、3本指、ライト/スクショ/触覚、録画APIとABI検査、二重要求/古い応答抑止、タイムアウトを維持。ホーム/ロック/範囲/除外/実行元/前面アプリ/通知/CCの検査を緩めない。アプリ内は触覚テストのみ。
+- **診断の範囲：** domain/codeだけを長さ制限して表示。userInfo・エラー説明・画像・入力内容・座標・イベント履歴を保存しない。通知や診断を録画の実行経路へ転用しない。
+- **検証：** ソースa9c8125の[CI](https://github.com/puty0807/P.H.S/actions/runs/44300269573)で診断の操作/状態/経路、エラー省略/上限/消去、古い応答の隔離と既存回帰、iOS15 arm64eビルド/パッケージを検証。0.1.8は実機未確認。録画拒否の原因・リスプリング直後の初回再現性・触覚体感も未確認。旧版をすべて保持する。
 
-**English:** Version 0.1.6 received top input and second-tap candidates but canceled before recognition. Preview 0.1.7 uses the dedicated status-bar window, prevents foreign delivery from replacing/canceling that owner, preserves an eligible Home reference and exposes individual cancellation causes. The 0.35-second/12-point limits and Home/unlock/scope/exclusion/origin/cover/Control Center gates remain. Native cancellation never executes an action. Three-finger/recording/screenshot/flashlight implementations remain unchanged. Update and respring, then test flashlight near the Home-screen clock. Device recognition and regression on 0.1.7 remain pending; the initial recording rejection remains unexplained. All rollback packages are retained.
+**English:** Preview 0.1.8 adds recording operation, state, route and bounded NSError domain/code diagnostics. Check Recording Diagnostics only reads the latest result; it does not record or run a haptic test. Status-bar flashlight and screenshot capture worked on 0.1.7; recording start/stop/save worked on 0.1.5. This is a diagnostic preview, not a claimed recording fix. Update and respring, try recording once on Home, then inspect the diagnostic. Verify the recording indicator, stop and Photos playback separately. Existing input, output, serialization and permission gates are retained. Version 0.1.8 device acceptance remains pending, and all rollback packages remain available.
 
 ## 公開ページと更新
 
