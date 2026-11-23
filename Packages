@@ -14,6 +14,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -32,6 +33,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -50,6 +52,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -68,6 +71,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -86,6 +90,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -104,6 +109,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -122,6 +128,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -140,6 +147,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.gesture
@@ -158,6 +166,7 @@ Description: Separate opt-in gesture-to-action engine for iOS 15 Dopamine Rootle
 Author: Putei Hirose
 Name: P.H.S GESTURE (Research Preview)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.gesture.json
+Icon: https://puty0807.github.io/repo/icons/gesture.png
 Depiction: https://puty0807.github.io/repo/#gesture
 
 Package: jp.puteihirose.keyboard
@@ -177,6 +186,7 @@ Description: UIKit input toolbar beta: avoids chat composer Send/Plus overlap; r
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Icon: https://puty0807.github.io/repo/icons/keyboard.png
 Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
@@ -196,6 +206,7 @@ Description: Dynamically repositions P.H.S KEYBOARD on input-method and keyboard
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Icon: https://puty0807.github.io/repo/icons/keyboard.png
 Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
@@ -215,6 +226,7 @@ Description: Displays P.H.S KEY above the native iOS editing menu, then restores
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Icon: https://puty0807.github.io/repo/icons/keyboard.png
 Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
@@ -234,6 +246,7 @@ Description: Adds fail-closed Home Spotlight search toolbar support while retain
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Icon: https://puty0807.github.io/repo/icons/keyboard.png
 Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
@@ -253,6 +266,7 @@ Description: Fixes Spotlight native edit menu overlap by preserving KEY at a saf
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Icon: https://puty0807.github.io/repo/icons/keyboard.png
 Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
@@ -272,6 +286,7 @@ Description: Adds collision-aware automatic KEY placement and a drag grip with p
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Icon: https://puty0807.github.io/repo/icons/keyboard.png
 Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.keyboard
@@ -291,6 +306,7 @@ Description: Shares CLIP history including copied passwords across eligible apps
 Author: Putei Hirose
 Name: P.H.S KEYBOARD (Prototype)
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.keyboard.json
+Icon: https://puty0807.github.io/repo/icons/keyboard.png
 Depiction: https://puty0807.github.io/repo/#keyboard
 
 Package: jp.puteihirose.locknote
@@ -309,6 +325,7 @@ Description: An editable sticky note for the iOS 15 Lock Screen.
 Author: Putei Hirose
 Name: LockNote
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.locknote.json
+Icon: https://puty0807.github.io/repo/icons/notes.png
 Depiction: https://puty0807.github.io/repo/#notes
 
 Package: jp.puteihirose.locknote
@@ -327,6 +344,7 @@ Description: Editable lock-screen notes with position lock, text size controls, 
 Author: Putei Hirose
 Name: LockNote
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.locknote.json
+Icon: https://puty0807.github.io/repo/icons/notes.png
 Depiction: https://puty0807.github.io/repo/#notes
 
 Package: jp.puteihirose.pin
@@ -345,6 +363,7 @@ Description: Choose a full or cropped capture from the screenshot buttons on iOS
 Author: Putei Hirose
 Name: P.H.S PIN
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.pin.json
+Icon: https://puty0807.github.io/repo/icons/pin.png
 Depiction: https://puty0807.github.io/repo/#pin
 
 Package: jp.puteihirose.pin
@@ -363,5 +382,6 @@ Description: Improves screenshot capture recovery and adds hide/restore all pins
 Author: Putei Hirose
 Name: P.H.S PIN
 SileoDepiction: https://puty0807.github.io/repo/depictions/jp.puteihirose.pin.json
+Icon: https://puty0807.github.io/repo/icons/pin.png
 Depiction: https://puty0807.github.io/repo/#pin
 

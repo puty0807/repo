@@ -20,6 +20,11 @@ for stanza in index.read_text(encoding="utf-8").strip().split("\n\n"):
             stanza += f"\nSileoDepiction: {base}{relative}"
         slug = slugs.get(package.group(1))
         if slug:
+            icon = f"icons/{slug}.png"
+            if not Path(icon).is_file():
+                raise FileNotFoundError(icon)
+            stanza = re.sub(r"(?m)^Icon:[^\n]*\n?", "", stanza).rstrip("\n")
+            stanza += f"\nIcon: {base}{icon}"
             stanza = re.sub(r"(?m)^Depiction:[^\n]*\n?", "", stanza).rstrip("\n")
             stanza += f"\nDepiction: {base}#{slug}"
     entries.append(stanza)

@@ -71,9 +71,6 @@ h1, h2, h3, p, dl, dd, figure { margin: 0; }
   border: var(--rule); border-radius: 12px; color: white; background: #684653;
   font: 700 1.48rem/1 system-ui, sans-serif;
 }
-.package-icon[data-tone="keyboard"] { background: #39303f; color: #f4da9a; }
-.package-icon[data-tone="pin"] { background: #642c32; color: #ffdfac; }
-.package-icon[data-tone="notes"] { background: #edbd53; color: #352315; }
 .byline { color: var(--muted); font-size: .84rem; overflow-wrap: anywhere; }
 .tags { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; margin-top: .32rem; }
 .tags span {
@@ -195,3 +192,8 @@ dialog::backdrop { background: #151006a6; }
 @media (prefers-reduced-motion: reduce) {
   .manager-link { transition: none; }
 }
+
+.package-icon { overflow: hidden; }
+.package-icon img { width: 100%; height: 100%; object-fit: cover; }
+.detail-heading { display: flex; align-items: center; gap: .7rem; min-width: 0; }
+#detail-icon { border-radius: 12px; flex: none; }

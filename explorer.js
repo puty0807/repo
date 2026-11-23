@@ -63,25 +63,25 @@ document.addEventListener('keydown', (event) => {
 const featured = [
   {
     slug: 'keyboard', id: 'jp.puteihirose.keyboard', name: 'P.H.S KEYBOARD',
-    version: '0.0.19', icon: '⌨',
+    version: '0.0.19', icon: './icons/keyboard.png',
     summary: 'CLIPを対応アプリ間で共有。コピーしたパスワードにも対応。KEYバーの配置・移動も改善。',
     keywords: 'キーボード コピー CLIP クリップボード 入力 テキスト 履歴'
   },
   {
     slug: 'pin', id: 'jp.puteihirose.pin', name: 'P.H.S PIN',
-    version: '0.4.1', icon: '⌖',
+    version: '0.4.1', icon: './icons/pin.png',
     summary: '複数の画像を固定し、全部隠す／戻す・位置とサイズのリセットができる。スクショ起動処理も改善。',
     keywords: 'ピン 画像 スクリーンショット OCR QR 範囲 切り抜き'
   },
   {
     slug: 'gesture', id: 'jp.puteihirose.gesture', name: 'P.H.S GESTURE',
-    version: '0.1.8', icon: '✦',
+    version: '0.1.8', icon: './icons/gesture.png',
     summary: '0.1.8診断版。上端のライト・スクショは0.1.7で成功。録画の拒否理由を詳しく表示。',
     keywords: 'ジェスチャー タップ ライト 録画 スクリーンショット 触覚 試用版'
   },
   {
     slug: 'notes', id: 'jp.puteihirose.locknote', name: 'LockNote',
-    version: '0.1.3', icon: '≡',
+    version: '0.1.3', icon: './icons/notes.png',
     summary: 'ロック画面の付箋。文字サイズ・位置固定・位置リセット、入力の取り消し・やり直しに対応。',
     keywords: 'ノーツ ノート メモ ロック画面 付箋'
   }
@@ -155,8 +155,12 @@ function renderCards() {
     if (!terms.every((term) => description.includes(term))) continue;
     const card = get('package-card').content.cloneNode(true);
     const icon = card.querySelector('.package-icon');
-    icon.textContent = entry.icon ?? '◈';
-    icon.dataset.tone = entry.slug;
+    if (entry.icon) {
+      const image = document.createElement('img');
+      image.src = entry.icon;
+      image.alt = '';
+      icon.append(image);
+    } else icon.textContent = '◈';
     card.querySelector('h3').textContent = entry.name;
     card.querySelector('.byline').textContent = byline(entry);
     card.querySelector('.category-tag').textContent = categoryName(entry.category);
@@ -174,6 +178,10 @@ function renderCards() {
 }
 
 function setMetadata(entry) {
+  const image = get('detail-icon');
+  image.hidden = !entry.icon;
+  if (entry.icon) image.src = entry.icon;
+  else image.removeAttribute('src');
   get('package-title').textContent = entry.name;
   get('package-byline').textContent = byline(entry);
   get('detail-category').textContent = categoryName(entry.category);
